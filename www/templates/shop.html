@@ -5,21 +5,23 @@
   <ion-content padding="true" class="has-header">
     <form id="shop-form1" class="list">
       <label class="item item-input" id="shop-search1">
-        <i class="icon ion-search placeholder-icon">{{product.imageurl}}</i>
+        <i class="icon ion-search placeholder-icon"></i>
         <input type="search" placeholder="">
       </label>
     </form>
-    <div class="list card" id="shop-card21">
+
+    <div class="list card" id="shop-card21" ng-repeat='product in products'>
       <ion-item id="shop-list-item12" ui-sref="menu.ProductInfo">{{product.name}}</ion-item>
       <div class='productImageBox'>
-        <i class="icon ion-image" id='productImage'></i>
+        <img id='productImage' src='{{product.imageurl}}'>
       </div>
       <div class="item item-body" id="shop-list-item-container2">
         <div id="shop-markdown2" class="show-list-numbers-and-dots">
-          <p class="productInfo">{{product.price}}</p>
+          <p class="productInfo">${{product.price}}.00</p>
         </div>
       </div>
     </div>
     <div id="shop-button-bar1" class="button-bar"></div>
+  
   </ion-content>
 </ion-view>

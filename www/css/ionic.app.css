@@ -9887,7 +9887,8 @@ a.button {
 #productImage {
   font-size: 64px;
   color: #888888;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%; }
 
 .productInfo {
   margin-top: 0px;
