@@ -1,0 +1,35 @@
+<ion-view title="{product.info}" id="page6">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-cart" ui-sref="menu.shoppingCart"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="ProductInfo-card23">
+      <div class="productInfoImageBox">
+        <i class="icon ion-image" id="productInfoImage">{{product.imageurl}}</i>
+      </div>
+      <ion-item id="ProductInfo-list-item16">{{product.name}}</ion-item>
+      <div class="item item-body" id="ProductInfo-list-item-container7">
+        <div id="ProductInfo-markdown8" class="show-list-numbers-and-dots">
+          <p class="productInfoDesc">{{product.desc}}</p>
+        </div>
+      </div>
+      <ion-item id="ProductInfo-list-item17">{{product.price}}</ion-item>
+      <form id="ProductInfo-form4" class="list">
+        <label class="item item-select" id="ProductInfo-select1">
+          <span class="input-label">Size</span>
+          <select>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+        </label>
+        <label class="item item-input" id="ProductInfo-input1">
+          <span class="input-label">Quantity:</span>
+          <input type="number" placeholder="">
+        </label>
+      </form>
+      <a ui-sref="menu.shoppingCart" id="ProductInfo-button8" class="button button-positive  button-block">Add to cart</a>
+    </div>
+  </ion-content>
+</ion-view>

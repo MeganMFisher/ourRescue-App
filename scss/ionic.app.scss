@@ -1,0 +1,167 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+$main-font: 'Montserrat';
+
+$main-yellow: #fac03c;
+
+// HOME--------------------------------
+
+body {
+    // font-family: $main-font;
+}
+
+.homeImageContainer {
+     margin-left: -10px;
+     width: calc(100% + 20px);
+}
+
+.homeImage {
+    display: block; 
+    width: 100%; 
+    height: auto;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+// VOLUNTEER--------------------------------
+
+#pade3-slider1 {
+    width:calc(100% + 20px);
+    height:100%;
+    margin-left:-10px;
+}
+
+#page3-heading3 {
+    color:#000000;
+    text-align:center;
+}
+
+.slide1-imageBox {
+    margin: 0px; 
+    line-height: 250px; 
+    background-color: rgb(232, 235, 239); 
+    text-align: center;
+}
+
+#slide1-image {
+    font-size: 64px; 
+    color: rgb(136, 136, 136); 
+    vertical-align: middle;
+}
+
+.slide1-text {
+    color:#000000;
+}
+
+#page3-heading2 {
+    color:#000000;
+    text-align:center;
+}
+
+#slide2-image {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#page3-heading4 {
+    color:#000000;
+    text-align:center;
+}
+
+#page3-markdown16 {
+    text-align:right
+}
+
+.slide2-text {
+    color:#000000;
+    font-size:15px;
+}
+
+#page3-heading1 {
+    color:#000000;
+    text-align:center;
+}
+
+.slide3-text {
+    color:#000000;
+}
+// SHOP--------------------------------
+
+.productImageBox {
+    margin: 0px; 
+    line-height: 250px; 
+    background-color: rgb(232, 235, 239); 
+    text-align: center;
+}
+
+#productImage {
+    font-size: 64px; 
+    color: rgb(136, 136, 136); 
+    vertical-align: middle;
+}
+
+.productInfo {
+    margin-top:0px;
+    color:#000000;
+}
+
+// PRODUCT INFO--------------------------------
+
+.productInfoImageBox {
+    margin: 0px; 
+    line-height: 250px; 
+    background-color: rgb(232, 235, 239); 
+    text-align: center;
+}
+
+#productInfoImage {
+    font-size: 64px; 
+    color: rgb(136, 136, 136); 
+    vertical-align: middle;
+}
+
+.productInfoDesc {
+    margin-top:0px;
+    color:#000000;
+}
+
+// SHOPPING CART--------------------------------
+
+
+
+
+// DONATE--------------------------------
+
+
+
+// SOCIAL MEDIA--------------------------------
+
+#socialMedia-button-bar2 a {
+    width: 33.3%;
+}
+
