@@ -30,6 +30,9 @@ $main-yellow: #fac03c;
 body {
     // font-family: $main-font;
 }
+#page1 {
+    background-color: black;
+}
 
 .homeImageContainer {
      margin-left: -10px;
@@ -112,6 +115,10 @@ body {
 }
 // SHOP--------------------------------
 
+#page4 {
+    // background-color: fuchsia;
+}
+
 .productImageBox {
     margin: 0px; 
     line-height: 250px; 
@@ -166,3 +173,9 @@ body {
     width: 33.3%;
 }
 
+
+// MENU--------------------------------
+
+#side-menu21{
+    background-color: #313131;
+}
