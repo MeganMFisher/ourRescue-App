@@ -11,9 +11,9 @@
     </form>
 
     <div class="list card" id="shop-card21" ng-repeat='product in products'>
-      <ion-item id="shop-list-item12" ui-sref="menu.ProductInfo">{{product.name}}</ion-item>
+      <ion-item id="shop-list-item12" ui-sref="menu.details({id: product.id})">{{product.name}}</ion-item>
       <div class='productImageBox'>
-        <img id='productImage' src='{{product.imageurl}}'>
+        <img id='productImage' ng-src='{{product.imageurl}}'>
       </div>
       <div class="item item-body" id="shop-list-item-container2">
         <div id="shop-markdown2" class="show-list-numbers-and-dots">

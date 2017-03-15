@@ -151,6 +151,7 @@ body {
     font-size: 64px; 
     color: rgb(136, 136, 136); 
     vertical-align: middle;
+    width: 100%;
 }
 
 .productInfoDesc {
@@ -175,6 +176,14 @@ body {
 
 
 // MENU--------------------------------
+
+#mainMenuHeader {
+    background-color: #313131;
+}
+
+#mainMenuItems {
+    // background-color: fuchsia;
+}
 
 #side-menu21{
     background-color: #313131;

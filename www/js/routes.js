@@ -66,8 +66,8 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.ProductInfo', {
-    url: '/product_info',
+  .state('menu.details', {
+    url: '/product/:id',
     views: {
       'side-menu21': {
         templateUrl: 'templates/ProductInfo.html',

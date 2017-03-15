@@ -9906,7 +9906,8 @@ a.button {
 #productInfoImage {
   font-size: 64px;
   color: #888888;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%; }
 
 .productInfoDesc {
   margin-top: 0px;
@@ -9914,6 +9915,9 @@ a.button {
 
 #socialMedia-button-bar2 a {
   width: 33.3%; }
+
+#mainMenuHeader {
+  background-color: #313131; }
 
 #side-menu21 {
   background-color: #313131; }

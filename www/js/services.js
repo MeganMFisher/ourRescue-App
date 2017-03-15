@@ -16,7 +16,7 @@ angular.module('app.services', [])
 
     this.getOneProduct = function(id) {
       return $http.get(`https://ourrescueapp.herokuapp.com/products/${id}`).then(function(resp){
-        console.log(resp)
+        
         return resp;
       })
     }
