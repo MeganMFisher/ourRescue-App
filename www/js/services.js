@@ -1,13 +1,16 @@
 angular.module('app.services', [])
-
-// .factory('BlankFactory', [function(){
-
-// }])
-
 .service('BlankService', ['$http', function($http){
 
+
+
+let devUrl = 'http://localhost:8100'
+let herokuUrl = 'https://ourrescueapp.herokuapp.com'
+
+let baseUrl = herokuUrl;
+
+
     this.getAllProducts = function() {
-      return $http.get('https://ourrescueapp.herokuapp.com/products').then(function(resp){
+      return $http.get(baseUrl + '/products').then(function(resp){
         console.log(resp)
         return resp;
       })
@@ -15,72 +18,26 @@ angular.module('app.services', [])
     
 
     this.getOneProduct = function(id) {
-      return $http.get(`https://ourrescueapp.herokuapp.com/products/${id}`).then(function(resp){
+      return $http.get(baseUrl + `/products/${id}`).then(function(resp){
         
         return resp;
       })
     }
 
-    this.getUsers = function() {
-			return $http({
-				method: 'GET',
-				url: '/user'
-			});
-		};
+    this.getData = () => $http.get('/api/get-all')
+    // this.login = (useremail, userpassword) => $http.post('/login', {
+    //     useremail: useremail,
+    //     userpassword: userpassword
+    // });
 
-		this.getUserOrder = function(id) {
-			return $http({
-					method: 'GET',
-					url: '/order/' + id
-				})
-				.catch(function(err) {
-					console.log(err);
+    this.addToCart = (item, userId) => $http.post('/add-to-cart', {
+        item: item,
+        userId: userId
+    });
 
-				});
-		};
-
-		this.getProducts = function() {
-			return $http({
-				method: "GET",
-				url: "/products"
-			});
-		};
-
-		this.addToCart = function(id, productid, qty) {
-			return $http({
-				method: 'POST',
-				url: '/add/item/cart/' + id,
-				data: {
-					id: productid,
-					qty: qty
-				}
-			});
-		};
-
-		this.updateProductQty = function(id, qty) {
-			return $http({
-				method: 'PUT',
-				url: "/update/qty/" + id,
-				data: {
-					qty: qty
-				}
-			});
-		};
-
-		this.removeFromCart = function(id) {
-			return $http({
-				method: 'DELETE',
-				url: '/delete/item/cart/' + id
-			});
-		};
-
-		this.placeOrder = function(id, orderid) {
-			return $http({
-				method: 'PUT',
-				url: '/order/complete/' + orderid + "/" + id
-			});
-		};
-  
+    this.checkOut = (userId) => $http.post('/check-out', {
+        userId: userId
+    });
 
 
 

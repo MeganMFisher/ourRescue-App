@@ -5,7 +5,6 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, BlankService) {
 
-
 }])
    
 .controller('donateCtrl', ['$scope', '$stateParams', 
@@ -52,9 +51,35 @@ function ($scope, $stateParams, BlankService) {
 
 }])
    
-.controller('shoppingCartCtrl', ['$scope', '$stateParams', 
-function ($scope, $stateParams) {
+.controller('shoppingCartCtrl', ['$scope', '$stateParams', '$auth', 
+    function ($scope, $stateParams, BlankService, $auth) {
 
+    mainService.getData().then(response => {
+      $scope.items = response.data;
+    })
+    $scope.addToCart = item => {
+      mainService.addToCart(item.id, $scope.user.id).then(response => {
+        $scope.cart = response;
+      })
+    }
+    $scope.checkOut = () => {
+      mainService.checkOut($scope.user.id).then(response => {
+        $scope.checkout = response;
+      })
+    }
+
+    //  $scope.login = (username, password) => {
+    //   $auth.login({
+    //     username: username,
+    //     password: password
+    //   }).then(response => {
+    //     if (response.status === 200) {
+    //       $scope.user = (response.data.user);
+    //       $auth.setToken(response);
+    //       $state.go('home')
+    //     }
+    //   })
+    // }
 
 }])
  
