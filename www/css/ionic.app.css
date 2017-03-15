@@ -9829,6 +9829,10 @@ a.button {
   margin-left: auto;
   margin-right: auto; }
 
+#homeButton {
+  background: rgba(250, 192, 60, 0.5);
+  color: black; }
+
 #pade3-slider1 {
   width: calc(100% + 20px);
   height: 100%;
