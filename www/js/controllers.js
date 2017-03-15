@@ -68,18 +68,6 @@ function ($scope, $stateParams, BlankService) {
       })
     }
 
-    //  $scope.login = (username, password) => {
-    //   $auth.login({
-    //     username: username,
-    //     password: password
-    //   }).then(response => {
-    //     if (response.status === 200) {
-    //       $scope.user = (response.data.user);
-    //       $auth.setToken(response);
-    //       $state.go('home')
-    //     }
-    //   })
-    // }
 
 }])
  
