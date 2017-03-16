@@ -10057,7 +10057,7 @@ a.button {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: rgba(249, 250, 250, 0.3);
+  background: rgba(249, 250, 250, 0.85);
   margin-left: -10px;
   width: calc(100% + 20px); }
 
