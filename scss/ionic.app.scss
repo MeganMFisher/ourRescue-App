@@ -172,6 +172,11 @@ body {
 
 // DONATE--------------------------------
 
+#page2 {
+    background: url('../img/littlegirl.png') no-repeat;
+    height: 750px;
+}
+
 .donateLogoBox {
     background-color: #58595b;
     height: 50px;
@@ -187,7 +192,7 @@ body {
 }
 
 .donateImage {
-    background: url('../img/littlegirl.png');
+    // background: url('../img/littlegirl.png');
     background-size: cover;
     background-position: center;
     height: 580px;

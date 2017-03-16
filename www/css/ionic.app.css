@@ -9917,6 +9917,10 @@ a.button {
   margin-top: 0px;
   color: #000000; }
 
+#page2 {
+  background: url("../img/littlegirl.png") no-repeat;
+  height: 750px; }
+
 .donateLogoBox {
   background-color: #58595b;
   height: 50px;
@@ -9930,7 +9934,6 @@ a.button {
   background-size: cover; }
 
 .donateImage {
-  background: url("../img/littlegirl.png");
   background-size: cover;
   background-position: center;
   height: 580px;
