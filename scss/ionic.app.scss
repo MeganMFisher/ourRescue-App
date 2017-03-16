@@ -327,18 +327,60 @@ body {
 }
 
 
-// ABOLITIONISTS 
+// ABOLITIONISTS--------------------------------
+
+.abolitionistMainImageBox {
+    margin: 0px; 
+    line-height: 250px;  
+    margin-left: -10px;
+    width: calc(100% + 20px);
+}
+
+#abolitionistMainImage {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.abolitionistSignBox {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+}
+
+.abolitionistSignBox img {
+    border: 2px solid black;
+    width: 150px;
+}
+
+.abolitionistSignBox h4 {
+    color: #58595b;
+}
+
+.red-button {
+    background-color: #fac03c;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+    width: 90px;
+}
 
 .abolitionistImageBox {
     margin: 0px; 
     line-height: 250px; 
-    background-color: rgb(232, 235, 239); 
-    text-align: center;
 }
 
 #abolitionistImage {
-    font-size: 64px; 
-    color: rgb(136, 136, 136); 
     vertical-align: middle;
     width: 100%;
 }
+

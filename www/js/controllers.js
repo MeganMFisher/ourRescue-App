@@ -74,7 +74,6 @@ function ($scope, $stateParams, BlankService) {
 
       BlankService.getAbolitionists().then(function(resp) {
         $scope.abolitionists = resp.data;
-        console.log(resp.data)
       });
 
     }])
