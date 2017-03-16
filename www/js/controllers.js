@@ -15,8 +15,7 @@ function ($scope, $stateParams) {
    
 .controller('page3Ctrl', ['$scope', '$stateParams',
 function ($scope, $stateParams) {
-
-
+ 
 }])
    
 .controller('menuCtrl', ['$scope', '$stateParams', 
@@ -54,20 +53,28 @@ function ($scope, $stateParams, BlankService) {
 .controller('shoppingCartCtrl', ['$scope', '$stateParams', '$auth', 
     function ($scope, $stateParams, BlankService, $auth) {
 
-    mainService.getData().then(response => {
-      $scope.items = response.data;
-    })
-    $scope.addToCart = item => {
-      mainService.addToCart(item.id, $scope.user.id).then(response => {
-        $scope.cart = response;
-      })
-    }
-    $scope.checkOut = () => {
-      mainService.checkOut($scope.user.id).then(response => {
-        $scope.checkout = response;
-      })
-    }
-
+    // mainService.getData().then(response => {
+    //   $scope.items = response.data;
+    // })
+    // $scope.addToCart = item => {
+    //   mainService.addToCart(item.id, $scope.user.id).then(response => {
+    //     $scope.cart = response;
+    //   })
+    // }
+    // $scope.checkOut = () => {
+    //   mainService.checkOut($scope.user.id).then(response => {
+    //     $scope.checkout = response;
+    //   })
+    // }
 
 }])
  
+.controller('abolitionistsCtrl', ['$scope', '$stateParams', 'BlankService',
+    function ($scope, $stateParams, BlankService) {
+
+      BlankService.getAbolitionists().then(function(resp) {
+        $scope.abolitionists = resp.data;
+        console.log(resp.data)
+      });
+
+    }])

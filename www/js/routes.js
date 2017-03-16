@@ -83,6 +83,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.abolitionist', {
+    url: '/abolitionist',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/abolitionist.html',
+        controller: 'abolitionistsCtrl'
+    }
+    }
+  })
+
 
 $urlRouterProvider.otherwise('/side-menu21/')
 

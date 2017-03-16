@@ -10033,3 +10033,15 @@ a.button {
 
 #side-menu21 {
   background-color: #313131; }
+
+.abolitionistImageBox {
+  margin: 0px;
+  line-height: 250px;
+  background-color: #e8ebef;
+  text-align: center; }
+
+#abolitionistImage {
+  font-size: 64px;
+  color: #888888;
+  vertical-align: middle;
+  width: 100%; }

@@ -24,6 +24,13 @@ let baseUrl = herokuUrl;
       })
     }
 
+    this.getAbolitionists = function() {
+      return $http.get(baseUrl + '/abolitionists').then(function(resp){
+        
+        return resp;
+    
+      })
+    }
 
 
 
