@@ -12,8 +12,8 @@ $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
-$dark:                            #444 !default;
 */
+$dark:                            #313131 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -30,6 +30,12 @@ $main-yellow: #fac03c;
 body {
     // font-family: $main-font;
 }
+
+.bar.bar-stable {
+    background-color: black;
+}
+
+
 #page1 {
     background-color: black;
 }
@@ -55,6 +61,10 @@ body {
 
 
 // VOLUNTEER--------------------------------
+
+#page3 {
+    background-color: #c1c1c0;
+}
 
 #pade3-slider1 {
     width:calc(100% + 20px);
@@ -122,7 +132,7 @@ body {
 // SHOP--------------------------------
 
 #page4 {
-    background: linear-gradient( rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.3));
+    background: #e1e1e1
 }
 
 .productImageBox {
@@ -241,7 +251,7 @@ body {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 10%;
-    background: url('http://www.777a7.com/img163/uhkqyfnujgminwjqmude.jpg') no-repeat;
+    background: url('../img/donatePic.png') no-repeat;
     background-size: cover;
     height: 600px;
 }
@@ -303,7 +313,7 @@ body {
 // SOCIAL MEDIA--------------------------------
 
 #socialMediaPage {
-    background: url('http://www.qbicink.com/wp-content/uploads/2015/03/wg_dark_background7.jpg');
+    background: url('../img/media.png');
     // background-size: cover;
     margin-left: -10px;
     width: calc(100% + 20px);
@@ -320,22 +330,30 @@ body {
 // MENU--------------------------------
 
 #mainMenuHeader {
-    background-color: #313131;
+    background-color: black;
+  
 }
 
-#mainMenuItems {
-    // background-color: fuchsia;
+.bar.bar-stable .title {
+    color: #c1c1c0;
 }
 
 #side-menu21{
     background-color: #313131;
+    
+}
+
+.item-complex .item-content, .item-radio .item-content {
+    background-color: #313131;
+    color: #c1c1c0;
+    // border: 1px solid black;
 }
 
 
 // ABOLITIONISTS--------------------------------
 
 #page9 {
-    background: url('http://cdn.pikoff.com/wp-content/uploads/2016/04/23/Ai-Grey-linen-texture-background-vector-free-download.jpg') no-repeat;
+    background: url('../img/abolitionistsPic.png') no-repeat;
     background-size: cover;
 }
 
