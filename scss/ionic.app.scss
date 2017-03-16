@@ -323,19 +323,26 @@ body {
 // SOCIAL MEDIA--------------------------------
 
 #socialMediaPage {
-    background: url('../img/media.png');
-    // background-size: cover;
+    background: url('../img/yellowPattern.png') no-repeat center;
+    background-size: cover;
     margin-left: -10px;
     width: calc(100% + 20px);
-    height: 610px;
 }
 
 
 
 #socialMedia-button-bar2 a {
-    width: 33.3%;
+    width: 30%;
     margin-bottom: 20px;
+    margin-left: 2.5%;
 }
+
+
+#socialMedia-button12 {
+    border: 3px solid grey;
+}
+
+
 
 // MENU--------------------------------
 
@@ -405,7 +412,6 @@ body {
 }
 
 .chainLink {
-    // text-decoration: none;
     color: #fac03c;
 }
 
