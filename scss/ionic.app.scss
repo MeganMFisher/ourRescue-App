@@ -329,6 +329,11 @@ body {
 
 // ABOLITIONISTS--------------------------------
 
+#page9 {
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/9a/2a/0a/9a2a0a9ba0ac008a197061ce62b2191b.jpg') no-repeat;
+    background-size: cover;
+}
+
 .abolitionistMainImageBox {
     margin: 0px; 
     line-height: 250px;  
@@ -339,18 +344,19 @@ body {
 #abolitionistMainImage {
     vertical-align: middle;
     width: 100%;
+    // margin-bottom: 15px;
 }
 
 .abolitionistSignBox {
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 0px;
-    height: 250px;
+    width: 70%;
+    height: 287px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: lightgray;
+    background: rgba(249, 250, 250, .3);
     margin-left: -10px;
     width: calc(100% + 20px);
 }
@@ -361,7 +367,7 @@ body {
 }
 
 .abolitionistSignBox h4 {
-    color: #58595b;
+    color: #313131;
 }
 
 .red-button {
@@ -382,5 +388,6 @@ body {
 #abolitionistImage {
     vertical-align: middle;
     width: 100%;
+    outline: none;
 }
 
