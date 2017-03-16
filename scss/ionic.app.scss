@@ -372,12 +372,13 @@ body {
     line-height: 250px;  
     margin-left: -10px;
     width: calc(100% + 20px);
+    
 }
 
 #abolitionistMainImage {
     vertical-align: middle;
     width: 100%;
-    // margin-bottom: 15px;
+   height: 350px;
 }
 
 .abolitionistSignBox {
@@ -401,6 +402,11 @@ body {
 
 .abolitionistSignBox h4 {
     color: #313131;
+}
+
+.chainLink {
+    // text-decoration: none;
+    color: #fac03c;
 }
 
 .red-button {
