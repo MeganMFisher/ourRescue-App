@@ -9970,6 +9970,13 @@ a.button {
   margin-top: 4%;
   width: 100%; }
 
+.donationBoxOneBackground {
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  height: 600px;
+  background-color: white;
+  border-top: 20px solid white; }
+
 .donationWordBoxOne {
   display: flex;
   flex-direction: column;
@@ -9983,7 +9990,9 @@ a.button {
   padding-bottom: 10%;
   background: url("../img/donatePic.png") no-repeat;
   background-size: cover;
-  height: 600px; }
+  height: 600px;
+  width: 90%;
+  margin: auto; }
 
 .donationBoxOne h1 {
   color: #313131; }
@@ -10006,7 +10015,7 @@ a.button {
   color: white; }
 
 .donationBoxTwo {
-  margin-top: 4%;
+  border-top: 20px solid white;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 5%;
@@ -10050,7 +10059,8 @@ a.button {
 
 .item-complex .item-content, .item-radio .item-content {
   background-color: #313131;
-  color: #c1c1c0; }
+  color: #c1c1c0;
+  border-bottom: 1px solid black; }
 
 #page9 {
   background: url("../img/abolitionistsPic.png") no-repeat;
