@@ -95,7 +95,7 @@ body {
 #page3-heading3 {
   color: #313131;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 
 .slide1-imageBox {
@@ -116,6 +116,7 @@ body {
 #page3-heading2 {
   color: #313131;
   text-align: center;
+  letter-spacing: 3px;
 }
 
 #slide2-image {
@@ -124,6 +125,20 @@ body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+#page1-list4 {
+    height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#page2-list4 {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #page3-heading4 {
