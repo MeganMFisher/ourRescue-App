@@ -5,16 +5,16 @@ in ionic's _variables.scss file.
 For example, you might change some of the default colors:
 
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
 $positive:                        #387ef5 !default;
 $balanced:                        #33cd5f !default;
 $assertive:                       #ef473a !default;
+$stable:                          #f8f8f8 !default;
 $royal:                           #886aea !default;
 */
 $dark:                            #313131 !default;
 $energized:                       #fac03c !default;
-$calm:                            #56d2c8 !default;
-
+$calm:                            #48839a !default;
+$darkgray:                        #99999a !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
@@ -67,7 +67,11 @@ body {
 // VOLUNTEER--------------------------------
 
 #page3 {
-    background-color: #c1c1c0;
+    // background-color: #c1c1c0;
+}
+
+.swiper-pagination-bullet {
+    background: $dark;
 }
 
 #pade3-slider1 {
@@ -76,30 +80,52 @@ body {
     margin-left:-10px;
 }
 
-#page3-heading3 {
-    color:#000000;
-    text-align:center;
+#page3-slide26 {
+    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+     width:calc(100% + 20px);
+    height:100%;
 }
+
+#page3-slide25{
+    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+     width:calc(100% + 20px);
+    height:100%;
+}
+
+#page3-slide24 {
+    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+     width:calc(100% + 20px);
+    height:100%;
+   
+}
+
+#page3-heading3 {
+    color:#313131;
+    text-align:center;
+    letter-spacing: 3px;
+}
+
 
 .slide1-imageBox {
     margin: 0px; 
-    line-height: 250px; 
-    background-color: rgb(232, 235, 239); 
     text-align: center;
 }
 
 #slide1-image {
-    font-size: 64px; 
-    color: rgb(136, 136, 136); 
-    vertical-align: middle;
+    border: 5px solid #313131;
 }
+
 
 .slide1-text {
-    color:#000000;
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+
+
 #page3-heading2 {
-    color:#000000;
+    color:#313131;
     text-align:center;
 }
 
@@ -112,7 +138,7 @@ body {
 }
 
 #page3-heading4 {
-    color:#000000;
+    color:#313131;
     text-align:center;
 }
 
@@ -120,18 +146,28 @@ body {
     text-align:right
 }
 
+#eventButton {
+    margin-left: 5%;
+    width: 90%;
+
+}
+
 .slide2-text {
-    color:#000000;
-    font-size:15px;
+    color:#fff;
+    font-weight: bold;
+    font-size:16px;
+    text-decoration: none;
 }
 
 #page3-heading1 {
-    color:#000000;
+    color:#313131;
     text-align:center;
 }
 
 .slide3-text {
-    color:#000000;
+    color: $darkgray;
+    text-decoration: none;
+    font-weight: bold;
 }
 // SHOP--------------------------------
 
@@ -165,7 +201,7 @@ body {
 }
 
 #shop-list-item-container2 {
-    background-color: #56d2c8;
+    background-color: #48839a;
     // background: url('https://s-media-cache-ak0.pinimg.com/564x/58/45/10/5845109357b5b895669f67eb17d89b3e.jpg') center;;
     // background-size: cover;
 }
