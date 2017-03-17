@@ -11,565 +11,537 @@ $assertive:                       #ef473a !default;
 $stable:                          #f8f8f8 !default;
 $royal:                           #886aea !default;
 */
-$dark:                            #313131 !default;
-$energized:                       #fac03c !default;
-$calm:                            #48839a !default;
-$darkgray:                        #99999a !default;
+
+$dark : #313131 !default;
+$energized : #fac03c !default;
+$calm : #48839a !default;
+$darkgray : #99999a !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
 $main-font: 'Montserrat';
-
 $main-yellow: #fac03c;
-
 // HOME--------------------------------
-
 body {
-    // font-family: $main-font;
+  // font-family: $main-font;
 }
 
 .bar.bar-stable {
-    background-color: black;
+  background-color: black;
 }
 
 .bar-stable .button.button-clear {
-    color: lightgray;
+  color: lightgray;
 }
 
-
 #page1 {
-    background-color: black;
+  background-color: black;
 }
 
 .homeImageContainer {
-     margin-left: -10px;
-     width: calc(100% + 20px);
+  margin-left: -10px;
+  width: calc(100% + 20px);
 }
 
 .homeImage {
-    display: block; 
-    width: 100%; 
-    height: auto;
-    margin-left: auto; 
-    margin-right: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #homeButton {
-    background: rgba(250, 192, 60, .5);
-    color: black;
-    // height: 150px;
+  background: rgba(250, 192, 60, .5);
+  color: black;
+  // height: 150px;
 }
 
-
 // VOLUNTEER--------------------------------
-
 #page3 {
-    // background-color: #c1c1c0;
+  // background-color: #c1c1c0;
 }
 
 .swiper-pagination-bullet {
-    background: $dark;
+  background: $dark;
 }
 
 #pade3-slider1 {
-    width:calc(100% + 20px);
-    height:100%;
-    margin-left:-10px;
+  width: calc(100% + 20px);
+  height: 100%;
+  margin-left: -10px;
 }
 
 #page3-slide26 {
-    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
-     width:calc(100% + 20px);
-    height:100%;
+  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+  width: calc(100% + 20px);
+  height: 100%;
 }
 
-#page3-slide25{
-    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
-     width:calc(100% + 20px);
-    height:100%;
-}
-
-#page3-slide24 {
-    background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
-     width:calc(100% + 20px);
-    height:100%;
-   
-}
-
-#page3-heading3 {
-    color:#313131;
-    text-align:center;
-    letter-spacing: 3px;
-}
-
-
-.slide1-imageBox {
-    margin: 0px; 
-    text-align: center;
-}
-
-#slide1-image {
-    border: 5px solid #313131;
-}
-
-
-.slide1-text {
-    color:#fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-
-#page3-heading2 {
-    color:#313131;
-    text-align:center;
-}
-
-#slide2-image {
-    display: block; 
-    width: 100%; 
-    height: auto; 
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-#page3-heading4 {
-    color:#313131;
-    text-align:center;
-}
-
-#page3-markdown16 {
-    text-align:right
-}
-
-#eventButton {
-    margin-left: 5%;
-    width: 90%;
-
-}
-
-.slide2-text {
-    color:#fff;
-    font-weight: bold;
-    font-size:16px;
-    text-decoration: none;
-}
-
-#page3-heading1 {
-    color:#313131;
-    text-align:center;
-    letter-spacing: 4px;
-}
-
-#page3-list4 ion-item{
-    width: 80%;
-    margin-left: 10%;
-    height: 100px;
-    border: 2px solid $darkgray;
-    padding-top: 10px;
-    color: $energized;
-}
-
-.slide3-text {
-    color: $darkgray;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#page3-list-item20 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-#page3-list-item21 {
-    font-weight: bold;
-}
-
-
-#page3-list-item22 {
-    font-weight: bold;
-}
-
-#page3-list-item23 {
-    font-weight: bold;
-}
-
-
-
-
-#page3-list4 ion-item div {
-    font-size: 13px;
-    padding-top: 15px;
-    color: $dark;
-    font-weight: light;
-}
-// SHOP--------------------------------
-
-#page4 {
-    background: #e1e1e1
-    // background: url('https://s-media-cache-ak0.pinimg.com/736x/4a/9d/a0/4a9da019bc037d7ff7e57c08fe4a45db.jpg');
-    // background-size: cover;
-}
-
-.bar-stable .button {
-    color: lightgray;
-}
-
-#shop-list-item12 {
-    font-weight: bold;
-    color: white;
-}
-
-.productImageBox {
-    margin: 0px; 
-    line-height: 250px; 
-    background-color: rgb(232, 235, 239); 
-    text-align: center;
-}
-
-#productImage {
-    font-size: 64px; 
-    color: rgb(136, 136, 136); 
-    vertical-align: middle;
-    width: 100%;
-}
-
-#shop-list-item-container2 {
-    background-color: #48839a;
-    // background: url('https://s-media-cache-ak0.pinimg.com/564x/58/45/10/5845109357b5b895669f67eb17d89b3e.jpg') center;;
-    // background-size: cover;
-}
-
-#shop-markdown2 p {
-    // color: black;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: -1px;
-}
-.productInfo {
-    margin-top:0px;
-    color:#000000;
-    
-}
-
-// PRODUCT INFO--------------------------------
-
-#page6 {
-    background-color: #e1e1e1;
-}
-
-.productInfoImageBox {
-    margin: 0px; 
-    line-height: 250px; 
-    background-color: rgb(232, 235, 239); 
-    text-align: center;
-}
-
-#productInfoImage {
-    font-size: 64px; 
-    color: rgb(136, 136, 136); 
-    vertical-align: middle;
-    width: 100%;
-}
-
-#ProductInfo-list-item-container7 {
-    border-bottom: 1px solid lightgray;
-}
-
-#ProductInfo-list-item17 {
-    border-bottom: 2px solid lightgray;
-}
-
-#ProductInfo-select1 {
-    border-bottom: 1px solid lightgray;
-}
-
-#ProductInfo-input1 {
-    border-bottom: 1px solid lightgray;
-}
-
-#ProductInfo-list-item16 {
-    background-color: #313131;
-    color: lightgray;
-}
-
-.productInfoDesc {
-    margin-top:0px;
-    color:#000000;
-}
-
-#ProductInfo-button8 {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-weight: bold;
-}
-
-// SHOPPING CART--------------------------------
-
-
-
-
-// DONATE--------------------------------
-
-#page2 {
-    background: url('../img/littlegirl.png') no-repeat;
-}
-
-.donateLogoBox {
-    background-color: #58595b;
-    margin-top: -10px;
-    height: 50px;
-    margin-left: -10px;
-    width: calc(100% + 20px);
-}
-
-.donateLogo {
-    padding-top: 4.5%;
-    margin-left: 10%;
-    width: 80%;
-    background-size: cover;
-}
-
-.donateImage {
-    // background: url('../img/littlegirl.png');
-    background-size: cover;
-    background-position: center;
-    height: 580px;
-    margin-left: -10px;
-    width: calc(100% + 20px);
-}
-
-.donateImageWordBox {
-    width: 59%;
-    height: 580px;
-    // margin-left: 10%;
-    padding-top: 110%;
-    letter-spacing: 2px;
-    background: linear-gradient( rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.3));
-}
-
-.donateYellowWordBox {
-    background: linear-gradient( rgba(250, 192, 60, 0.5), rgba(250, 192, 60, 0.5));
-    height: 120px;
-    // margin-left: -45px;
-    width: calc(100% + 155px);
-
-}
-
-.donateYellowWordBox h3 {
-    color: #58595b;
-    font-size: 28px;
-    padding-top: 2%;
-    padding-left: 6%;
-}
-
-.mainDonateSection {
-    margin-top: 4%;
-    width: 100%;
-}
-
-.donationBoxOneBackground {
-    margin-left: -10px;
-    width: calc(100% + 20px);
-    height: 600px;
-    background-color: white;
-    border-top: 20px solid white;
-}   
-
-.donationWordBoxOne {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 550px;
-    padding-top: 15%;
-}
-
-.donationBoxOne {
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 10%;
-    background: url('../img/donatePic.png') no-repeat;
-    background-size: cover;
-    height: 600px;
-    width: 90%;
-    margin: auto;
-}
-
-.donationBoxOne h1 {
-    color: #313131;
-}
-
-.donationBoxOne h5 {
-    color: #313131;
-    text-align: center;
-}
-
-.donateButtonBox {
-    display: flex;
-    width: 100%;
-}
-
-#donate-button2 {
-    width: 20%;
-    // background-color: #c1c1c0;
-    background-color: #58595b;
-    color: white;
-}
-
-#donate-button1 {
-    background-color: #58595b;
-    color: white;
-}
-
-.donationBoxTwo {
-    border-top: 20px solid white;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    margin-left: -10px;
-    width: calc(100% + 20px);
-    background-color: #313131;
-    height: 615px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.donationBoxTwo h1 {
-    color: white;
-}
-
-.donationBoxTwo h3 {
-    color: #fac03c;
-    opacity: .7;
-}
-
-.donationBoxTwo h6 {
-    text-align: justify;
-    color: white
-}
-
-// SOCIAL MEDIA--------------------------------
-
-#socialMediaPage {
-    background: url('../img/yellowPattern.png') no-repeat center;
-    background-size: cover;
-    margin-left: -10px;
-    width: calc(100% + 20px);
-}
-
-
-
-#socialMedia-button-bar2 a {
-    width: 30%;
-    margin-bottom: 20px;
-    margin-left: 2.5%;
-}
-
-
-#socialMedia-button12 {
-    margin-top: 40px;
-    border: 3px solid grey;
-}
-
-
-
-// MENU--------------------------------
-
-#mainMenuHeader {
-    background-color: black;
+#page3-slide25 {
+  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+  width: calc(100% + 20px);
+  height: 100%;
   
 }
 
+#page3-slide24 {
+  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+  width: calc(100% + 20px);
+  height: 100%;
+}
+
+#page3-heading3 {
+  color: #313131;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.slide1-imageBox {
+  margin: 0px;
+  text-align: center;
+}
+
+#slide1-image {
+  border: 5px solid #313131;
+}
+
+.slide1-text {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#page3-heading2 {
+  color: #313131;
+  text-align: center;
+}
+
+#slide2-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page3-heading4 {
+  color: #313131;
+  text-align: center;
+}
+
+#page3-list4 {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#page3-markdown16 {
+  text-align: right
+}
+
+#eventButton {
+  margin-left: 5%;
+  width: 90%;
+}
+
+
+.slide2-text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#page3-heading1 {
+  color: #313131;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+#page3-list4 ion-item {
+  width: 80%;
+  margin-left: 10%;
+  height: 100px;
+  border: 2px solid $darkgray;
+  padding-top: 10px;
+  color: $energized;
+}
+
+.slide3-text {
+  color: lightgray;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#page3-list-item20 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+#page3-list-item21 {
+  font-weight: bold;
+}
+
+#page3-list-item22 {
+  font-weight: bold;
+}
+
+#page3-list-item23 {
+  font-weight: bold;
+}
+
+#page3-list4 ion-item div {
+  font-size: 13px;
+  padding-top: 15px;
+  color: $dark;
+  font-weight: light;
+}
+
+// SHOP--------------------------------
+#page4 {
+  background: #e1e1e1 // background: url('https://s-media-cache-ak0.pinimg.com/736x/4a/9d/a0/4a9da019bc037d7ff7e57c08fe4a45db.jpg');
+  // background-size: cover;
+}
+
+.bar-stable .button {
+  color: lightgray;
+}
+
+#shop-list-item12 {
+  font-weight: bold;
+  color: white;
+}
+
+.productImageBox {
+  margin: 0px;
+  line-height: 250px;
+  background-color: rgb(232, 235, 239);
+  text-align: center;
+}
+
+#productImage {
+  font-size: 64px;
+  color: rgb(136, 136, 136);
+  vertical-align: middle;
+  width: 100%;
+}
+
+#shop-list-item-container2 {
+  background-color: #48839a;
+  // background: url('https://s-media-cache-ak0.pinimg.com/564x/58/45/10/5845109357b5b895669f67eb17d89b3e.jpg') center;;
+  // background-size: cover;
+}
+
+#shop-markdown2 p {
+  // color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: -1px;
+}
+
+.productInfo {
+  margin-top: 0px;
+  color: #000000;
+}
+
+// PRODUCT INFO--------------------------------
+#page6 {
+  background-color: #e1e1e1;
+}
+
+.productInfoImageBox {
+  margin: 0px;
+  line-height: 250px;
+  background-color: rgb(232, 235, 239);
+  text-align: center;
+}
+
+#productInfoImage {
+  font-size: 64px;
+  color: rgb(136, 136, 136);
+  vertical-align: middle;
+  width: 100%;
+}
+
+#ProductInfo-list-item-container7 {
+  border-bottom: 1px solid lightgray;
+}
+
+#ProductInfo-list-item17 {
+  border-bottom: 2px solid lightgray;
+}
+
+#ProductInfo-select1 {
+  border-bottom: 1px solid lightgray;
+}
+
+#ProductInfo-input1 {
+  border-bottom: 1px solid lightgray;
+}
+
+#ProductInfo-list-item16 {
+  background-color: #313131;
+  color: lightgray;
+}
+
+.productInfoDesc {
+  margin-top: 0px;
+  color: #000000;
+}
+
+#ProductInfo-button8 {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-weight: bold;
+}
+
+// SHOPPING CART--------------------------------
+// DONATE--------------------------------
+#page2 {
+  background: url('../img/littlegirl.png') no-repeat;
+}
+
+.donateLogoBox {
+  background-color: #58595b;
+  margin-top: -10px;
+  height: 50px;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}
+
+.donateLogo {
+  padding-top: 4.5%;
+  margin-left: 10%;
+  width: 80%;
+  background-size: cover;
+}
+
+.donateImage {
+  // background: url('../img/littlegirl.png');
+  background-size: cover;
+  background-position: center;
+  height: 580px;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}
+
+.donateImageWordBox {
+  width: 59%;
+  height: 580px;
+  // margin-left: 10%;
+  padding-top: 110%;
+  letter-spacing: 2px;
+  background: linear-gradient( rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.3));
+}
+
+.donateYellowWordBox {
+  background: linear-gradient( rgba(250, 192, 60, 0.5), rgba(250, 192, 60, 0.5));
+  height: 120px;
+  // margin-left: -45px;
+  width: calc(100% + 155px);
+}
+
+.donateYellowWordBox h3 {
+  color: #58595b;
+  font-size: 28px;
+  padding-top: 2%;
+  padding-left: 6%;
+}
+
+.mainDonateSection {
+  margin-top: 4%;
+  width: 100%;
+}
+
+.donationBoxOneBackground {
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  height: 600px;
+  background-color: white;
+  border-top: 20px solid white;
+}
+
+.donationWordBoxOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 550px;
+  padding-top: 15%;
+}
+
+.donationBoxOne {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 10%;
+  background: url('../img/donatePic.png') no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 90%;
+  margin: auto;
+}
+
+.donationBoxOne h1 {
+  color: #313131;
+}
+
+.donationBoxOne h5 {
+  color: #313131;
+  text-align: center;
+}
+
+.donateButtonBox {
+  display: flex;
+  width: 100%;
+}
+
+#donate-button2 {
+  width: 20%;
+  // background-color: #c1c1c0;
+  background-color: #58595b;
+  color: white;
+}
+
+#donate-button1 {
+  background-color: #58595b;
+  color: white;
+}
+
+.donationBoxTwo {
+  border-top: 20px solid white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  background-color: #313131;
+  height: 615px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donationBoxTwo h1 {
+  color: white;
+}
+
+.donationBoxTwo h3 {
+  color: #fac03c;
+  opacity: .7;
+}
+
+.donationBoxTwo h6 {
+  text-align: justify;
+  color: white
+}
+
+// SOCIAL MEDIA--------------------------------
+#socialMediaPage {
+  background: url('../img/yellowPattern.png') no-repeat center;
+  background-size: cover;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}
+
+#socialMedia-button-bar2 a {
+  width: 30%;
+  margin-bottom: 20px;
+  margin-left: 2.5%;
+}
+
+#socialMedia-button12 {
+  margin-top: 40px;
+  border: 3px solid grey;
+}
+
+// MENU--------------------------------
+#mainMenuHeader {
+  background-color: black;
+}
+
 .bar.bar-stable .title {
-    color: #c1c1c0;
+  color: #c1c1c0;
 }
 
-#side-menu21{
-    background-color: #313131;
-    
+#side-menu21 {
+  background-color: #313131;
 }
 
-.item-complex .item-content, .item-radio .item-content {
-    background-color: #313131;
-    color: #c1c1c0;
-    border-bottom: 1px solid black;
+.item-complex .item-content,
+.item-radio .item-content {
+  background-color: #313131;
+  color: #c1c1c0;
+  border-bottom: 1px solid black;
 }
-
 
 // ABOLITIONISTS--------------------------------
-
 #page9 {
-    background: url('../img/abolitionistsPic.png') no-repeat;
-    background-size: cover;
+  background: url('../img/abolitionistsPic.png') no-repeat;
+  background-size: cover;
 }
 
 .abolitionistMainImageBox {
-    margin-top: -10px;
-    line-height: 250px;  
-    margin-left: -10px;
-    width: calc(100% + 20px);
-    
+  margin-top: -10px;
+  line-height: 250px;
+  margin-left: -10px;
+  width: calc(100% + 20px);
 }
 
 #abolitionistMainImage {
-    vertical-align: middle;
-    width: 100%;
-   height: 350px;
+  vertical-align: middle;
+  width: 100%;
+  height: 350px;
 }
 
 .abolitionistSignBox {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 70%;
-    height: 287px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: rgba(249, 250, 250, .5);
-    margin-left: -10px;
-    width: calc(100% + 20px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 70%;
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(249, 250, 250, .5);
+  margin-left: -10px;
+  width: calc(100% + 20px);
 }
 
 .abolitionistSignBox img {
-    border: 2px solid #313131;
-    width: 150px;
+  border: 2px solid #313131;
+  width: 150px;
 }
 
 .abolitionistSignBox h4 {
-    color: #313131;
+  color: #313131;
 }
 
 .chainLink {
-    color: #fac03c;
+  color: #fac03c;
 }
 
 .red-button {
-    background-color: #fac03c;
-    padding: 4px 8px;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    text-decoration: none;
-    width: 90px;
+  background-color: #fac03c;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  text-decoration: none;
+  width: 90px;
 }
 
 .abolitionistImageBox {
-    margin: 0px; 
-    line-height: 250px; 
+  margin: 0px;
+  line-height: 250px;
 }
 
 #abolitionistImage {
-    vertical-align: middle;
-    width: 100%;
-    border: 5px solid #696968;
+  vertical-align: middle;
+  width: 100%;
+  border: 5px solid #696968;
 }
-

@@ -9891,6 +9891,12 @@ a.button {
   color: #313131;
   text-align: center; }
 
+#page3-list4 {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
 #page3-markdown16 {
   text-align: right; }
 
@@ -9918,7 +9924,7 @@ a.button {
   color: #fac03c; }
 
 .slide3-text {
-  color: #99999a;
+  color: lightgray;
   text-decoration: none;
   font-weight: bold; }
 
@@ -10155,7 +10161,8 @@ a.button {
 #side-menu21 {
   background-color: #313131; }
 
-.item-complex .item-content, .item-radio .item-content {
+.item-complex .item-content,
+.item-radio .item-content {
   background-color: #313131;
   color: #c1c1c0;
   border-bottom: 1px solid black; }
