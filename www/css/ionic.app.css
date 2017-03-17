@@ -9833,30 +9833,28 @@ a.button {
   margin-right: auto; }
 
 #homeButton {
-  background: rgba(250, 192, 60, 0.5);
-  color: black; }
+  margin-top: 0;
+  color: #fac03c;
+  font-weight: bold;
+  border: 5px solid #313131;
+  letter-spacing: 8px; }
+
+#page3 {
+  background: linear-gradient(#48839a, #85b5bf); }
 
 .swiper-pagination-bullet {
   background: #313131; }
 
-#pade3-slider1 {
+.volunteerHeader {
+  border-bottom: 3px solid white;
+  padding: 10px;
+  font-size: 30px;
   width: calc(100% + 20px);
-  height: 100%;
   margin-left: -10px; }
 
-#page3-slide26 {
-  background: linear-gradient(#48839a, #85b5bf);
+#pade3-slider1 {
   width: calc(100% + 20px);
-  height: 100%; }
-
-#page3-slide25 {
-  background: linear-gradient(#48839a, #85b5bf);
-  width: calc(100% + 20px);
-  height: 100%; }
-
-#page3-slide24 {
-  background: linear-gradient(#48839a, #85b5bf);
-  width: calc(100% + 20px);
+  margin-left: -10px;
   height: 100%; }
 
 #page3-heading3 {
@@ -9895,7 +9893,7 @@ a.button {
   justify-content: space-around; }
 
 #page2-list4 {
-  height: 95%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
@@ -9905,7 +9903,7 @@ a.button {
   text-align: center; }
 
 #page3-list4 {
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
@@ -9937,7 +9935,7 @@ a.button {
   color: #fac03c; }
 
 .slide3-text {
-  color: lightgray;
+  color: white;
   text-decoration: none;
   font-weight: bold; }
 
@@ -10151,7 +10149,7 @@ a.button {
   color: white; }
 
 #socialMediaPage {
-  background: url("../img/yellowPattern.png") no-repeat center;
+  background: #c1c1c0;
   background-size: cover;
   margin-left: -10px;
   width: calc(100% + 20px); }
@@ -10162,7 +10160,6 @@ a.button {
   margin-left: 2.5%; }
 
 #socialMedia-button12 {
-  margin-top: 40px;
   border: 3px solid grey; }
 
 #mainMenuHeader {

@@ -20,8 +20,8 @@ $darkgray : #99999a !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-$main-font: 'Montserrat';
-$main-yellow: #fac03c;
+
+
 // HOME--------------------------------
 body {
   // font-family: $main-font;
@@ -53,49 +53,47 @@ body {
 }
 
 #homeButton {
-  background: rgba(250, 192, 60, .5);
-  color: black;
-  // height: 150px;
+  margin-top: 0;
+  // background: rgba(250, 192, 60, .5);
+  // background: rgba(72, 131, 154, .5);
+  // background: $energized;
+  color: $energized;
+  font-weight: bold;
+  border: 5px solid $dark;
+  letter-spacing: 8px;
 }
 
 // VOLUNTEER--------------------------------
 #page3 {
-  // background-color: #c1c1c0;
+  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
 }
 
 .swiper-pagination-bullet {
   background: $dark;
 }
 
-#pade3-slider1 {
+.volunteerHeader {
+  // border: 5px solid white;
+  border-bottom: 3px solid white;
+  padding: 10px;
+  font-size: 30px;
   width: calc(100% + 20px);
-  height: 100%;
   margin-left: -10px;
 }
 
-#page3-slide26 {
-  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
+#pade3-slider1 {
   width: calc(100% + 20px);
+  margin-left: -10px;
   height: 100%;
 }
 
-#page3-slide25 {
-  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
-  width: calc(100% + 20px);
-  height: 100%;
-  
-}
 
-#page3-slide24 {
-  background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
-  width: calc(100% + 20px);
-  height: 100%;
-}
 
 #page3-heading3 {
   color: #313131;
   text-align: center;
   letter-spacing: 5px;
+  
 }
 
 .slide1-imageBox {
@@ -135,7 +133,7 @@ body {
 }
 
 #page2-list4 {
-  height: 95%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -147,7 +145,7 @@ body {
 }
 
 #page3-list4 {
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -186,7 +184,7 @@ body {
 }
 
 .slide3-text {
-  color: lightgray;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -317,6 +315,9 @@ body {
 }
 
 // SHOPPING CART--------------------------------
+
+
+
 // DONATE--------------------------------
 #page2 {
   background: url('../img/littlegirl.png') no-repeat;
@@ -457,7 +458,7 @@ body {
 
 // SOCIAL MEDIA--------------------------------
 #socialMediaPage {
-  background: url('../img/yellowPattern.png') no-repeat center;
+  background: #c1c1c0;
   background-size: cover;
   margin-left: -10px;
   width: calc(100% + 20px);
@@ -470,9 +471,10 @@ body {
 }
 
 #socialMedia-button12 {
-  margin-top: 40px;
   border: 3px solid grey;
+
 }
+
 
 // MENU--------------------------------
 #mainMenuHeader {
