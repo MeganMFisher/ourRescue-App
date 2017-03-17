@@ -50,6 +50,7 @@ body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 #homeButton {
@@ -61,6 +62,7 @@ body {
   font-weight: bold;
   border: 5px solid $dark;
   letter-spacing: 8px;
+  
 }
 
 // VOLUNTEER--------------------------------
@@ -74,11 +76,13 @@ body {
 
 .volunteerHeader {
   // border: 5px solid white;
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid white;
   padding: 10px;
-  font-size: 30px;
+  font-size: 37px;
   width: calc(100% + 20px);
   margin-left: -10px;
+ 
+
 }
 
 #pade3-slider1 {
@@ -92,13 +96,14 @@ body {
 #page3-heading3 {
   color: #313131;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   
 }
 
 .slide1-imageBox {
   margin: 0px;
   text-align: center;
+  z-index: 10;
 }
 
 #slide1-image {
@@ -111,10 +116,11 @@ body {
   font-weight: bold;
 }
 
+
 #page3-heading2 {
   color: #313131;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 
 #slide2-image {
@@ -171,7 +177,7 @@ body {
 #page3-heading1 {
   color: #313131;
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 
 #page3-list4 ion-item {
@@ -458,21 +464,21 @@ body {
 
 // SOCIAL MEDIA--------------------------------
 #socialMediaPage {
-  background: #c1c1c0;
+  background: black;
   background-size: cover;
   margin-left: -10px;
   width: calc(100% + 20px);
 }
 
 #socialMedia-button-bar2 a {
-  width: 30%;
+  width: 100%;
   margin-bottom: 20px;
-  margin-left: 2.5%;
+  margin-left: 9.5%;
 }
 
 #socialMedia-button12 {
-  border: 3px solid grey;
-
+  border: 3px solid $dark;
+  color: $light;
 }
 
 
