@@ -10037,14 +10037,29 @@ a.button {
   margin-right: 5%;
   font-weight: bold; }
 
+#page7 {
+  background-color: #e1e1e1; }
+
 #shoppingCart {
-  height: 400px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
+  flex-direction: column; }
+
+#backToShopButton {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 200px;
+  line-height: 20px; }
+
+.item-thumbnail-left {
+  background: #f8f8f8; }
 
 .cartThumbnail {
   background-size: cover; }
+
+.item-thumbnail-left h2 {
+  font-weight: bold;
+  color: #313131; }
 
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }

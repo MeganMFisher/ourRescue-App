@@ -1,15 +1,15 @@
 <ion-view title="Shopping Cart" id="page7">
   <ion-content padding="true" class="has-header">
     <div id='shoppingCart'>
-     <button class="button button-dark  button-outline" id='backToShopButton' ui-sref='menu.shop'>Continue Shopping</button>
+     <button class="button button-calm  button" id='backToShopButton' ui-sref='menu.shop'>Continue Shopping</button>
      <div>
     <ion-list id="shoppingCart-list3" ng-repeat='item in cart'>
       <ion-item class="item-thumbnail-left" id="shoppingCart-list-item9">
         <img class='cartThumbnail' ng-src={{item.imageurl}}>
         <h2>{{item.name}}</h2>
-        <p>Size: {{item.size}}</p>
-        <p>Price: {{item.price}}</p>
-        <p>Quantity: {{item.quantity}}</p>
+        <p><strong>Size:</strong> {{item.size}}</p>
+        <p><strong>Price:</strong> ${{item.price}}.00</p>
+        <p><strong>Quantity:</strong> {{item.quantity}}</p>
       </ion-item>
     </ion-list>
     <form id="shoppingCart-form3" class="list">

@@ -69,9 +69,9 @@ function ($scope, $stateParams, BlankService) {
     function ($scope, $stateParams, BlankService) {
 
       function getCart(){
-        BlankService.getCart().then(function(res) {
-          console.log(res);
-          $scope.cart = res.data;
+        BlankService.getCart().then(function(response) {
+          console.log(response);
+          $scope.cart = response.data;
         })
 
       }

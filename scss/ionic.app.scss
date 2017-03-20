@@ -322,15 +322,40 @@ body {
 
 // SHOPPING CART--------------------------------
 
+#page7 {
+  background-color: #e1e1e1;
+}
+
 #shoppingCart {
-  height: 400px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-around;
+}
+
+#shoppingCart-list3 {
+}
+
+#backToShopButton {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 200px;
+  line-height: 20px;
+
+}
+
+.item-thumbnail-left {
+  background: $stable;
 }
 
 .cartThumbnail {
   background-size: cover;
+
+}
+
+.item-thumbnail-left h2 {
+  font-weight: bold;
+  color: $dark;
 }
 
 
