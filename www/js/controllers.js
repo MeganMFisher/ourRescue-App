@@ -43,29 +43,40 @@ function ($scope, $stateParams) {
 .controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', 
 function ($scope, $stateParams, BlankService) {
 
+
       BlankService.getOneProduct($stateParams.id).then(function(resp){
         $scope.detail = resp.data[0];
       })
 
+      $scope.productData = {};
+
+      $scope.addToCart = function() {
+
+        console.log($scope.productData.size, $scope.productData.quantity)
+        console.log(`Going to service with ${$scope.detail.name}`)
+        BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function() {
+
+          BlankService.getCart().then(function(res) {
+            $scope.cart = res.data;
+          })
+        })
+      }
 
 }])
    
-.controller('shoppingCartCtrl', ['$scope', '$stateParams', '$auth', 
-    function ($scope, $stateParams, BlankService, $auth) {
+.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', 
+    function ($scope, $stateParams, BlankService) {
 
-    // mainService.getData().then(response => {
-    //   $scope.items = response.data;
-    // })
-    // $scope.addToCart = item => {
-    //   mainService.addToCart(item.id, $scope.user.id).then(response => {
-    //     $scope.cart = response;
-    //   })
-    // }
-    // $scope.checkOut = () => {
-    //   mainService.checkOut($scope.user.id).then(response => {
-    //     $scope.checkout = response;
-    //   })
-    // }
+
+  BlankService.getCart().then(function(res) {
+    console.log(res);
+    $scope.cart = res.data;
+  })
+
+  this.getProducts = function() {
+    return Array.from(products);
+  }
+
 
 }])
  

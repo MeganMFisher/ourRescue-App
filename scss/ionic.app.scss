@@ -322,6 +322,12 @@ body {
 
 // SHOPPING CART--------------------------------
 
+#shoppingCart {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 
 // DONATE--------------------------------
@@ -420,13 +426,16 @@ body {
 .donateButtonBox {
   display: flex;
   width: 100%;
+  
 }
 
 #donate-button2 {
-  width: 20%;
+  width: 75px;
+  height: 45px;
   // background-color: #c1c1c0;
   background-color: #58595b;
   color: white;
+  font-size: 15px;
 }
 
 #donate-button1 {

@@ -11,7 +11,6 @@ let baseUrl = devUrl;
 
     this.getAllProducts = function() {
       return $http.get(baseUrl + '/products').then(function(resp){
-        console.log(resp)
         return resp;
       })
     }
@@ -33,7 +32,21 @@ let baseUrl = devUrl;
     }
 
 
+  this.addToCart = function(size, quantity, detail) {
+    console.log(size, quantity, detail)
+    console.log(`Adding ${detail.name} to cart`)
+    return $http.post(baseUrl + '/api/cart', {
+      size: size,
+      quantity: quantity,
+      name: detail.name,
+      price: detail.price,
+      image: detail.imageUrl
+    })
+  }
 
+  this.getCart = function() {
+    return $http.get(baseUrl + '/api/cart')
+  }
 
 
     

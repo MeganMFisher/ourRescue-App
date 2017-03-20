@@ -10037,6 +10037,12 @@ a.button {
   margin-right: 5%;
   font-weight: bold; }
 
+#shoppingCart {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }
 
@@ -10118,9 +10124,11 @@ a.button {
   width: 100%; }
 
 #donate-button2 {
-  width: 20%;
+  width: 75px;
+  height: 45px;
   background-color: #58595b;
-  color: white; }
+  color: white;
+  font-size: 15px; }
 
 #donate-button1 {
   background-color: #58595b;

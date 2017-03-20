@@ -1,15 +1,22 @@
 <ion-view title="Shopping Cart" id="page7">
   <ion-content padding="true" class="has-header">
+    <div id='shoppingCart'>
+     <button class="button button-dark  button-outline" id='backToShopButton' ui-sref='menu.shop'>Continue Shopping</button>
+     <div>
     <ion-list id="shoppingCart-list3">
+      
       <ion-item class="item-thumbnail-left" id="shoppingCart-list-item9">
-        <h2>{{product.name}}</h2>
-        <p>{{product.size}} {{product.price}}</p>
+        <h2>{{cart.name}}</h2>
+        <p>{{cart.size}} {{cart.price}}</p>
       </ion-item>
     </ion-list>
     <form id="shoppingCart-form3" class="list">
       <label class="item item-input" id="shoppingCart-textarea2">
         <span class="input-label">Total:</span><textarea placeholder=""></textarea></label>
     </form>
+    </div>
     <button id="shoppingCart-button7" class="button button-dark  button-block">Checkout</button>
+  
+    </div>
   </ion-content>
 </ion-view>

@@ -16,8 +16,8 @@
       <ion-item id="ProductInfo-list-item17">${{detail.price}}.00</ion-item>
       <form id="ProductInfo-form4" class="list">
         <label class="item item-select" id="ProductInfo-select1">
-          <span class="input-label">Size</span>
-          <select>
+          <span class="input-label" >Size</span>
+          <select ng-model='productData.size'>
             <option>XS</option>
             <option>S</option>
             <option>M</option>
@@ -26,10 +26,10 @@
         </label>
         <label class="item item-input" id="ProductInfo-input1">
           <span class="input-label">Quantity:</span>
-          <input type="number" placeholder="">
+          <input type="number" placeholder="" ng-model='productData.quantity'>
         </label>
       </form>
-      <a ui-sref="menu.shoppingCart" id="ProductInfo-button8" class="button button-calm  button-block">Add to Cart</a>
+      <a ui-sref="menu.shoppingCart" id="ProductInfo-button8" class="button button-calm  button-block" ng-click="addToCart()">Add to Cart</a>
     </div>
   </ion-content>
 </ion-view>
