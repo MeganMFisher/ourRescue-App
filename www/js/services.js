@@ -33,8 +33,8 @@ let baseUrl = devUrl;
 
 
   this.addToCart = function(size, quantity, detail) {
-    console.log(size, quantity, detail)
-    console.log(`Adding ${detail.name} to cart`)
+    // console.log(size, quantity, detail)
+    // console.log(`Adding ${detail.name} to cart`)
     return $http.post(baseUrl + '/api/cart', {
       size: size,
       quantity: quantity,
@@ -46,6 +46,7 @@ let baseUrl = devUrl;
 
   this.getCart = function() {
     return $http.get(baseUrl + '/api/cart')
+
   }
 
 

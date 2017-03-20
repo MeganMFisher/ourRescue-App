@@ -40,7 +40,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', 
+.controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService',
 function ($scope, $stateParams, BlankService) {
 
 
@@ -52,30 +52,32 @@ function ($scope, $stateParams, BlankService) {
 
       $scope.addToCart = function() {
 
-        console.log($scope.productData.size, $scope.productData.quantity)
-        console.log(`Going to service with ${$scope.detail.name}`)
-        BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function() {
+        // console.log($scope.productData.size, $scope.productData.quantity)
+        // console.log(`Going to service with ${$scope.detail.name}`)
+        BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function(response) {
+          BlankService.getCart().then(function(response) {
+            $scope.cart = response.data;
+            console.log($scope.cart)
 
-          BlankService.getCart().then(function(res) {
-            $scope.cart = res.data;
           })
         })
       }
 
 }])
    
-.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', 
+.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService',
     function ($scope, $stateParams, BlankService) {
 
+      function getCart(){
+        BlankService.getCart().then(function(res) {
+          console.log(res);
+          $scope.cart = res.data;
+        })
 
-  BlankService.getCart().then(function(res) {
-    console.log(res);
-    $scope.cart = res.data;
-  })
+      }
+      getCart();
 
-  this.getProducts = function() {
-    return Array.from(products);
-  }
+
 
 
 }])

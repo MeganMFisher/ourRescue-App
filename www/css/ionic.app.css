@@ -10043,6 +10043,9 @@ a.button {
   flex-direction: column;
   justify-content: space-around; }
 
+.cartThumbnail {
+  background-size: cover; }
+
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }
 
