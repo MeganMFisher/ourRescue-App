@@ -10052,7 +10052,7 @@ a.button {
   line-height: 20px; }
 
 .item-thumbnail-left {
-  background: #f8f8f8; }
+  background: #fff; }
 
 .cartThumbnail {
   background-size: cover; }
@@ -10060,6 +10060,26 @@ a.button {
 .item-thumbnail-left h2 {
   font-weight: bold;
   color: #313131; }
+
+.item-thumbnail-left p strong {
+  color: #99999a; }
+
+#shoppingCart-button7 {
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 50px;
+  width: 120px;
+  font-size: 20px; }
+
+#totalCheckout {
+  background-color: black; }
+
+#totalCheckout h1 {
+  padding-left: 10px;
+  margin-top: 15px; }
+
+.bar-footer {
+  height: 80px; }
 
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }

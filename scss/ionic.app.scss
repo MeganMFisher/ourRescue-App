@@ -345,7 +345,7 @@ body {
 }
 
 .item-thumbnail-left {
-  background: $stable;
+  background: $light;
 }
 
 .cartThumbnail {
@@ -356,6 +356,35 @@ body {
 .item-thumbnail-left h2 {
   font-weight: bold;
   color: $dark;
+}
+
+.item-thumbnail-left p strong {
+  color: $darkgray;
+}
+
+.item-thumbnail-left p {
+  // color: $calm;
+}
+
+#shoppingCart-button7 {
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 50px;
+  width: 120px;
+  font-size: 20px;
+}
+
+#totalCheckout {
+  background-color: black;
+}
+
+#totalCheckout h1 {
+  padding-left: 10px;
+  margin-top: 15px;
+}
+
+.bar-footer{
+	height: 80px;
 }
 
 
