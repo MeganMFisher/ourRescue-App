@@ -8,16 +8,16 @@
             <img class='cartThumbnail' ng-src={{item.imageurl}}>
             <h2>{{item.name}}</h2>
             <p><strong>Size:</strong> {{item.size}}</p>
-            <p><strong>Price:</strong> ${{item.price}}.00</p>
+            <p><strong>Price:</strong> ${{item.price * item.quantity}}.00</p>
             <p><strong>Quantity:</strong> {{item.quantity}}</p>
-            <i class="ion-close-round"></i>
+            <i ng-click='removeFromCart(item)' class="ion-close-round"></i>
           </ion-item>
         </ion-list>
       </div>
     </div>
   </ion-content>
   <ion-footer-bar align-title="left" class="bar-dark" id="totalCheckout">
-  <h1 class="title">Total: ${{}}.00</h1>
+  <h1 class="title">Total: ${{total()}}.00</h1>
   <div class="buttons" ng-click="doSomething()">
     <button ion-button id="shoppingCart-button7" class="button button-calm">Checkout</button>
   </div>

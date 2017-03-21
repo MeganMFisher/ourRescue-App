@@ -1,7 +1,7 @@
 angular.module('app.services', [])
 .service('BlankService', ['$http', function($http){
 
-
+this.cart;
 
 let devUrl = 'http://localhost:8100'
 let herokuUrl = 'https://ourrescueapp.herokuapp.com'
@@ -54,13 +54,30 @@ let baseUrl = devUrl;
         quantity: quantity,
         name: detail.name,
         price: detail.price,
-        imageurl: detail.imageurl
+        imageurl: detail.imageurl, 
+        id: detail.id
       }
     })
     .then(res => {
       localStorage.setItem('token', res.data.token);
       return res
     })
+  }
+
+  this.removeFromCart = function(product) {
+    return $http({
+      url: baseUrl + '/api/removecart',
+      method: 'POST', 
+      headers: {
+        'authorization': localStorage.getItem('token')
+      },
+      data: product
+    })
+    .then(res => {
+      localStorage.setItem('token', res.data.token);
+      return res
+    })
+
   }
 
   // this.addToCart().then(res => {

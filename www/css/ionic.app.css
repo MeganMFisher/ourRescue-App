@@ -10043,7 +10043,8 @@ a.button {
 #shoppingCart {
   height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 100px; }
 
 #backToShopButton {
   margin-top: 20px;

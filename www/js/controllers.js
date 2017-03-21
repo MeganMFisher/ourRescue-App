@@ -67,17 +67,38 @@ function ($scope, $stateParams, BlankService) {
    
 .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService',
     function ($scope, $stateParams, BlankService) {
-
+    
       function getCart(){
         BlankService.getCart().then(function(response) {
           $scope.cart = response.data.cart;
           console.log($scope.cart)
+          this.cart = response.data.cart;
           
         })
 
       }
       getCart();
+      console.log(this.cart)
 
+      $scope.total = function(){
+        var cart = $scope.cart;
+        var total = 0;
+        for(var i = 0; i < cart.length; i++){
+            var item = $scope.cart[i];
+            total += (item.price * item.quantity);
+        }
+        return total;
+      }
+
+
+
+      $scope.removeFromCart = function(product){
+       BlankService.removeFromCart(product).then(function(response){
+         console.log(response);
+         getCart();
+       })
+
+      }
       
 
 
