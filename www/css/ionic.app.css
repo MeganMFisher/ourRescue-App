@@ -10081,6 +10081,12 @@ a.button {
 .bar-footer {
   height: 80px; }
 
+.ion-close-round {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  color: #fac03c; }
+
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }
 
