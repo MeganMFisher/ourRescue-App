@@ -30,7 +30,7 @@ let baseUrl = devUrl;
     
       })
     }
-  getCart = function() {
+  this.getCart = function() {
     return $http({
       url: baseUrl + '/api/viewcart',
       method: 'GET',
@@ -43,26 +43,34 @@ let baseUrl = devUrl;
 
 
   this.addToCart = function(size, quantity, detail) {
-    return $http.post(baseUrl + '/api/cart', {
-      // size: size,
-      // quantity: quantity,
-      // // name: detail.name,
-      // price: detail.price,
-      // imageurl: detail.imageurl
+    return $http({
+      url: baseUrl + '/api/cart',
+      method: 'POST',
+      headers: {
+        'authorization': localStorage.getItem('token')
+      },
+      data: {
+        size: size,
+        quantity: quantity,
+        name: detail.name,
+        price: detail.price,
+        imageurl: detail.imageurl
+      }
     })
     .then(res => {
       localStorage.setItem('token', res.data.token);
       return res
     })
   }
-  this.addToCart().then(function(response){
-    console.log(response)
-    getCart().then(res =>{
-      console.log(res)
-    })
-  });
+
+  // this.addToCart().then(res => {
+  //   console.log(res)
+  //   getCart().then(res => {
+  //     console.log(res)
+  //   })
+  // })
 
 
 
     
-}]);
+}]);//this is the end of the module  
