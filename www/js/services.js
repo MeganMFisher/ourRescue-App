@@ -1,7 +1,7 @@
 angular.module('app.services', [])
 .service('BlankService', ['$http', function($http){
 
-this.cart;
+this.cart = [];
 
 let devUrl = 'http://localhost:8100'
 let herokuUrl = 'https://ourrescueapp.herokuapp.com'
@@ -38,9 +38,7 @@ let baseUrl = devUrl;
         'authorization': localStorage.getItem('token')
       }
     })
-
   }
-
 
   this.addToCart = function(size, quantity, detail) {
     return $http({

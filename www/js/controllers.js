@@ -40,21 +40,36 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService',
-function ($scope, $stateParams, BlankService) {
+.controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
+function ($scope, $stateParams, BlankService, $rootScope) {
 
 
       BlankService.getOneProduct($stateParams.id).then(function(resp){
         $scope.detail = resp.data[0];
       })
 
+       function getCart(){
+        BlankService.getCart().then(function(response) {
+          $rootScope.cart = response.data.cart;
+          console.log($rootScope.cart)
+          BlankService.cart = response.data.cart;
+         
+        })
+
+      }
+      
+
       $scope.productData = {};
 
       $scope.addToCart = function() {
+       
+        // var currentCart = BlankService.getCart();
+        console.log(BlankService.getCart)
         BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function(response) {
           BlankService.getCart().then(function(response) {
-            $scope.cart = response.data;
-            console.log($scope.cart)
+            $rootScope.cart = response.data;
+            console.log($rootScope.cart)
+              getCart();
 
           })
         })
@@ -62,14 +77,15 @@ function ($scope, $stateParams, BlankService) {
 
 }])
    
-.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService',
-    function ($scope, $stateParams, BlankService) {
+.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
+    function ($scope, $stateParams, BlankService, $rootScope) {
+
     
       function getCart(){
         BlankService.getCart().then(function(response) {
-          $scope.cart = response.data.cart;
-          console.log($scope.cart)
-          this.cart = response.data.cart;
+          $rootScope.cart = response.data.cart;
+          console.log($rootScope.cart)
+          BlankService.cart = response.data.cart;
          
         })
 
@@ -78,10 +94,9 @@ function ($scope, $stateParams, BlankService) {
       
 
       $scope.total = function(){
-        var cart = $scope.cart;
         var total = 0;
-        for(var i = 0; i < cart.length; i++){
-            var item = $scope.cart[i];
+        for(var i = 0; i < BlankService.cart.length; i++){
+            var item = BlankService.cart[i];
             total += (item.price * item.quantity);
         }
         return total;
