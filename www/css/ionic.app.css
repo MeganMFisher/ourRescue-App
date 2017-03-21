@@ -10041,7 +10041,6 @@ a.button {
   background-color: #e1e1e1; }
 
 #shoppingCart {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px; }

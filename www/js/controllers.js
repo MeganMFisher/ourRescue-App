@@ -51,9 +51,6 @@ function ($scope, $stateParams, BlankService) {
       $scope.productData = {};
 
       $scope.addToCart = function() {
-
-        // console.log($scope.productData.size, $scope.productData.quantity)
-        // console.log(`Going to service with ${$scope.detail.name}`)
         BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function(response) {
           BlankService.getCart().then(function(response) {
             $scope.cart = response.data;
@@ -73,12 +70,12 @@ function ($scope, $stateParams, BlankService) {
           $scope.cart = response.data.cart;
           console.log($scope.cart)
           this.cart = response.data.cart;
-          
+         
         })
 
       }
       getCart();
-      console.log(this.cart)
+      
 
       $scope.total = function(){
         var cart = $scope.cart;
