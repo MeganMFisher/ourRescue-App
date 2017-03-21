@@ -75,7 +75,7 @@ function ($scope, $stateParams, BlankService) {
         })
 
       }
-      getCart();
+      // getCart();
 
       
 
