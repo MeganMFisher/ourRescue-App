@@ -1,7 +1,9 @@
 angular.module('app.services', [])
 .service('BlankService', ['$http', function($http){
 
-
+  // *******************************************
+  // *              BlankService               *
+  // *******************************************
 
 let devUrl = 'http://localhost:8100'
 let herokuUrl = 'https://ourrescueapp.herokuapp.com'

@@ -1,5 +1,9 @@
 angular.module('app.controllers', [])
 
+  // *******************************************
+  // *                homeCtrl                 *
+  // *******************************************
+
   .controller('homeCtrl', ['$scope', '$stateParams', 'BlankService', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
     // You can include any angular dependencies as parameters for this function
     // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -8,6 +12,10 @@ angular.module('app.controllers', [])
     }
   ])
 
+  // *******************************************
+  // *               donateCtrl                *
+  // *******************************************
+
   .controller('donateCtrl', ['$scope', '$stateParams',
     function ($scope, $stateParams) {
 
@@ -15,11 +23,19 @@ angular.module('app.controllers', [])
     }
   ])
 
+  // *******************************************
+  // *               page3Ctrl                 *
+  // *******************************************
+
   .controller('page3Ctrl', ['$scope', '$stateParams',
     function ($scope, $stateParams) {
 
     }
   ])
+
+  // *******************************************
+  // *                menuCtrl                 *
+  // *******************************************
 
   .controller('menuCtrl', ['$scope', '$stateParams',
     function ($scope, $stateParams) {
@@ -27,6 +43,10 @@ angular.module('app.controllers', [])
 
     }
   ])
+
+  // *******************************************
+  // *                shopCtrl                 *
+  // *******************************************
 
   .controller('shopCtrl', ['$scope', '$stateParams', 'BlankService',
     function ($scope, $stateParams, BlankService) {
@@ -39,12 +59,20 @@ angular.module('app.controllers', [])
     }
   ])
 
+  // *******************************************
+  // *           socialMediaCtrl               *
+  // *******************************************
+
   .controller('socialMediaCtrl', ['$scope', '$stateParams',
     function ($scope, $stateParams) {
 
 
     }
   ])
+
+  // *******************************************
+  // *            ProductInfoCtrl              *
+  // *******************************************
 
   .controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
     function ($scope, $stateParams, BlankService, $rootScope) {
@@ -120,6 +148,10 @@ angular.module('app.controllers', [])
     }
   ]) //end of controller
 
+  // *******************************************
+  // *           shoppingCartCtrl              *
+  // *******************************************
+
   .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
     function ($scope, $stateParams, BlankService, $rootScope) {
       $rootScope.cart = [];
@@ -177,12 +209,28 @@ angular.module('app.controllers', [])
     }
   ])
 
+  //********************************************
+  // *             abolitionistCtrl            *
+  // *******************************************
+
   .controller('abolitionistsCtrl', ['$scope', '$stateParams', 'BlankService',
     function ($scope, $stateParams, BlankService) {
 
       BlankService.getAbolitionists().then(function (resp) {
         $scope.abolitionists = resp.data;
       });
+
+    }
+  ])
+
+  // *******************************************
+  // *             checkoutCtrl                *
+  // *******************************************
+
+
+  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService',
+    function ($scope, $stateParams, BlankService) {
+
 
     }
   ])

@@ -21,11 +21,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// *******************************************
+// *               Home View                 *
+// *******************************************
 
-// HOME--------------------------------
-body {
-  // font-family: $main-font;
-}
 
 .bar.bar-stable {
   background-color: black;
@@ -65,7 +64,10 @@ body {
   
 }
 
-// VOLUNTEER--------------------------------
+// *******************************************
+// *            Volunteer View               *
+// *******************************************
+
 #page3 {
   background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
 }
@@ -221,7 +223,10 @@ body {
   font-weight: light;
 }
 
-// SHOP--------------------------------
+// *******************************************
+// *               Shop View                 *
+// *******************************************
+
 #page4 {
   background: #e1e1e1 // background: url('https://s-media-cache-ak0.pinimg.com/736x/4a/9d/a0/4a9da019bc037d7ff7e57c08fe4a45db.jpg');
   // background-size: cover;
@@ -269,7 +274,10 @@ body {
   color: #000000;
 }
 
-// PRODUCT INFO--------------------------------
+// *******************************************
+// *            Product View                 *
+// *******************************************
+
 #page6 {
   background-color: #e1e1e1;
 }
@@ -320,7 +328,9 @@ body {
   font-weight: bold;
 }
 
-// SHOPPING CART--------------------------------
+// *******************************************
+// *         Shopping Cart View              *
+// *******************************************
 
 #page7 {
   background-color: #e1e1e1;
@@ -393,8 +403,10 @@ body {
   color: $energized;
 }
 
+// *******************************************
+// *             Donate View                 *
+// *******************************************
 
-// DONATE--------------------------------
 #page2 {
   background: url('../img/littlegirl.png') no-repeat;
 }
@@ -535,7 +547,10 @@ body {
   color: white
 }
 
-// SOCIAL MEDIA--------------------------------
+// *******************************************
+// *        Social Media View                *
+// *******************************************
+
 #socialMediaPage {
   background: black;
   background-size: cover;
@@ -554,8 +569,10 @@ body {
   color: $light;
 }
 
+// *******************************************
+// *               Menu View                 *
+// *******************************************
 
-// MENU--------------------------------
 #mainMenuHeader {
   background-color: black;
 }
@@ -575,7 +592,10 @@ body {
   border-bottom: 1px solid black;
 }
 
-// ABOLITIONISTS--------------------------------
+// *******************************************
+// *          Abolitionists View             *
+// *******************************************
+
 #page9 {
   background: url('../img/abolitionistsPic.png') no-repeat;
   background-size: cover;
@@ -641,3 +661,7 @@ body {
   width: 100%;
   border: 5px solid #696968;
 }
+
+// *******************************************
+// *           Checkout View                 *
+// *******************************************
