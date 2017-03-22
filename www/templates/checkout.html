@@ -13,35 +13,35 @@
     <input type="text" placeholder="">
   </label>-->
   <label class="item item-input">
-    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="First Name" ng-model='addressData.firstName'>
   </label>
    <label class="item item-input">
-    <input type="text" placeholder="Last Name">
+    <input type="text" placeholder="Last Name" ng-model='addressData.lastName'>
   </label>
    </label>
    <label class="item item-input">
-    <input type="text" placeholder="Email Address">
+    <input type="text" placeholder="Email Address" ng-model='addressData.emailAddress'>
   </label>
     </label>
    <label class="item item-input">
-    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Address" ng-model='addressData.address'>
   </label>
    <label class="item item-input">
-    <input type="text" placeholder="City">
+    <input type="text" placeholder="City" ng-model='addressData.city'>
   </label>
    <label class="item item-input">
-    <input type="text" placeholder="State">
+    <input type="text" placeholder="State" ng-model='addressData.state'>
   </label>
      </label>
    <label class="item item-input">
-    <input type="text" placeholder="Zipcode">
+    <input type="text" placeholder="Zipcode" ng-model='addressData.zipcode'>
   </label>
     </div>
 
 <form ng-submit='charge(payment)' class='col-xs-4'>
     <h4>PAY WITH CARD</h4>
     <section class='form-group'>
-        <label class="item item-input">Price
+        <label class="item item-input">Total Price: ${{total()}}.00
         <input class='form-control' type="text" name="" ng-model='mockPrice' required>
         </label>
       <!--<label>Price to charge:</label>
@@ -113,7 +113,7 @@
         name="name"
         placeholder="YY">-->
     </section>
-    <button ion-button class="button button-calm button-block" type='sumbit'>CONFIRM</button>
+    <button ion-button class="button button-calm button-block" type='sumbit' ng-click="addToAddressDatabase()">CONFIRM</button>
 </form>
 
 

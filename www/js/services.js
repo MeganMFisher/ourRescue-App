@@ -110,7 +110,21 @@ let baseUrl = devUrl;
   }
 
 
-
+  this.addToAddressDatabase = function() {
+    return $http({
+      url: baseUrl + '/api/address',
+      method: 'POST',
+      data: {
+        size: size,
+        quantity: quantity,
+        name: detail.name,
+        price: detail.price,
+        imageurl: detail.imageurl, 
+        id: detail.id
+      }
+    
+  })
+  }
 
     
 }]);//this is the end of the module  

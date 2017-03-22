@@ -154,7 +154,9 @@ angular.module('app.controllers', [])
 
   .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
     function ($scope, $stateParams, BlankService, $rootScope) {
+      // $rootScope.total;
       $rootScope.cart = [];
+
       init();
       function init() {
        let token = localStorage.getItem('token'); 
@@ -228,9 +230,44 @@ angular.module('app.controllers', [])
   // *******************************************
 
 
-  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService',
-    function ($scope, $stateParams, BlankService) {
+  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService', '$stateParams', '$rootScope',
+    function ($scope, $stateParams, BlankService, $stateParams, $rootScope) {
+      
+      $rootScope.cart = [];
 
+      function getCart() {
+        return BlankService.getCart().then(function (cartFromServer) {
+          $rootScope.cart = cartFromServer;
+        })
+
+      }
+
+
+      $scope.total = function () {
+            if($rootScope.cart.length > 0){
+            var total = 0;
+            for (var i = 0; i < $rootScope.cart.length; i++) {
+              var item = $rootScope.cart[i];
+              total += (item.price * item.quantity);
+            }
+            return total;
+            } else {
+              return '0'
+            }
+          }
+
+
+      $scope.addressData = {};
+
+      $scope.addToAddressDatabase = function(){
+        BlankService.addToAddressDatabase($scope.addressData.firstName, $scope.addressData.lastName, $scope.addressData.emailAddress,
+        $scope.addressData.address,
+        $scope.addressData.city,
+        $scope.addressData.state,
+        $scope.addressData.zipcode).then(function(response){
+
+        })
+      }
 
     }
   ])
