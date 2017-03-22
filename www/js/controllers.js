@@ -1,126 +1,180 @@
 angular.module('app.controllers', [])
-  
-.controller('homeCtrl', ['$scope', '$stateParams', 'BlankService', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, BlankService) {
 
-}])
-   
-.controller('donateCtrl', ['$scope', '$stateParams', 
-function ($scope, $stateParams) {
+  .controller('homeCtrl', ['$scope', '$stateParams', 'BlankService', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+    // You can include any angular dependencies as parameters for this function
+    // TIP: Access Route Parameters for your page via $stateParams.parameterName
+    function ($scope, $stateParams, BlankService) {
 
+    }
+  ])
 
-}])
-   
-.controller('page3Ctrl', ['$scope', '$stateParams',
-function ($scope, $stateParams) {
- 
-}])
-   
-.controller('menuCtrl', ['$scope', '$stateParams', 
-function ($scope, $stateParams) {
+  .controller('donateCtrl', ['$scope', '$stateParams',
+    function ($scope, $stateParams) {
 
 
-}])
-   
-.controller('shopCtrl', ['$scope', '$stateParams', 'BlankService', 
-function ($scope, $stateParams, BlankService) {
+    }
+  ])
 
-      BlankService.getAllProducts().then(function(resp) {
+  .controller('page3Ctrl', ['$scope', '$stateParams',
+    function ($scope, $stateParams) {
+
+    }
+  ])
+
+  .controller('menuCtrl', ['$scope', '$stateParams',
+    function ($scope, $stateParams) {
+
+
+    }
+  ])
+
+  .controller('shopCtrl', ['$scope', '$stateParams', 'BlankService',
+    function ($scope, $stateParams, BlankService) {
+
+      BlankService.getAllProducts().then(function (resp) {
         $scope.products = resp.data;
       });
 
 
-}])
-   
-.controller('socialMediaCtrl', ['$scope', '$stateParams', 
-function ($scope, $stateParams) {
+    }
+  ])
+
+  .controller('socialMediaCtrl', ['$scope', '$stateParams',
+    function ($scope, $stateParams) {
 
 
-}])
-   
-.controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
-function ($scope, $stateParams, BlankService, $rootScope) {
+    }
+  ])
 
+  .controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
+    function ($scope, $stateParams, BlankService, $rootScope) {
 
-      BlankService.getOneProduct($stateParams.id).then(function(resp){
+      
+
+      BlankService.getOneProduct($stateParams.id).then(function (resp) {
         $scope.detail = resp.data[0];
       })
 
-       function getCart(){
-        BlankService.getCart().then(function(response) {
-          $rootScope.cart = response.data.cart;
+      function getCart() {
+        BlankService.getCart().then(function (cartFromServer) {
+          $rootScope.cart = cartFromServer;
           console.log($rootScope.cart)
-          BlankService.cart = response.data.cart;
-         
+          
+
         })
 
       }
-      
 
+      function isDuplicate() {
+        if ($rootScope.cart.length < 1) return false;
+        for (let item of $rootScope.cart) {
+          if (item.id === $scope.detail.id) {
+            return true;
+          }
+        }
+        return false;
+
+      }
       $scope.productData = {};
 
-      $scope.addToCart = function() {
-       
-        // var currentCart = BlankService.getCart();
-        console.log(BlankService.getCart)
-        BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function(response) {
-          BlankService.getCart().then(function(response) {
-            $rootScope.cart = response.data;
-            console.log($rootScope.cart)
-              getCart();
+      $scope.addToCart = function () {
 
+        if (!Array.isArray($rootScope.cart)) { //it cart is empty
+          console.log('cart was empty')
+          // $rootScope.cart = [];
+          BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function (cartFromServer) {
+              $rootScope.cart = cartFromServer;
           })
-        })
+        } else if (isDuplicate()) {
+          console.log('changing quantity')
+
+          for (let item of $rootScope.cart) {
+            if (item.id === $scope.detail.id) {
+
+              item.quantity += 1;
+              BlankService.updateCart($rootScope.cart).then(function(cartFromServer){
+                $rootScope.cart = cartFromServer;
+              })
+              return
+            }
+          }
+        } else {
+          console.log('adding to cart')
+          BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function (cartFromServer) {
+              $rootScope.cart = cartFromServer;
+          })
+
+
+        }
       }
 
-}])
-   
-.controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
+    }
+  ]) //end of controller
+
+  .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
     function ($scope, $stateParams, BlankService, $rootScope) {
+      $rootScope.cart = [];
+      init();
+      function init() {
+       let token = localStorage.getItem('token'); 
+        if(token && token != 'undefined'){
+          console.log('we have token')
+          getCart();
 
-    
-      function getCart(){
-        BlankService.getCart().then(function(response) {
-          $rootScope.cart = response.data.cart;
+        } else {
+          console.log('no token')
+          createToken().then(function(cartFromServer){
+            $rootScope.cart = cartFromServer;
+          })
+        }
+      }
+      
+      function createToken(){
+        return BlankService.createToken();
+      }
+
+      function getCart() {
+        BlankService.getCart().then(function (cartFromServer) {
+          $rootScope.cart = cartFromServer;
           console.log($rootScope.cart)
-          BlankService.cart = response.data.cart;
-         
+          
+
         })
 
       }
-      getCart();
-      
 
-      $scope.total = function(){
+
+      $scope.total = function () {
+        if($rootScope.cart.length > 0){
         var total = 0;
-        for(var i = 0; i < BlankService.cart.length; i++){
-            var item = BlankService.cart[i];
-            total += (item.price * item.quantity);
+        for (var i = 0; i < $rootScope.cart.length; i++) {
+          var item = $rootScope.cart[i];
+          total += (item.price * item.quantity);
         }
         return total;
+        }
       }
 
 
 
-      $scope.removeFromCart = function(product){
-       BlankService.removeFromCart(product).then(function(response){
-         console.log(response);
-         getCart();
-       })
+      $scope.removeFromCart = function (product) {
+        BlankService.removeFromCart(product).then(function (cartFromServer) {
+          $rootScope.cart = cartFromServer;
+        })
 
       }
-      
 
 
-}])
- 
-.controller('abolitionistsCtrl', ['$scope', '$stateParams', 'BlankService',
+
+    }
+  ])
+
+  .controller('abolitionistsCtrl', ['$scope', '$stateParams', 'BlankService',
     function ($scope, $stateParams, BlankService) {
 
-      BlankService.getAbolitionists().then(function(resp) {
+      BlankService.getAbolitionists().then(function (resp) {
         $scope.abolitionists = resp.data;
       });
 
-    }])
+    }
+  ])

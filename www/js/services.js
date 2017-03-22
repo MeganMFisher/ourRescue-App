@@ -1,7 +1,7 @@
 angular.module('app.services', [])
 .service('BlankService', ['$http', function($http){
 
-this.cart = [];
+
 
 let devUrl = 'http://localhost:8100'
 let herokuUrl = 'https://ourrescueapp.herokuapp.com'
@@ -37,10 +37,15 @@ let baseUrl = devUrl;
       headers: {
         'authorization': localStorage.getItem('token')
       }
+    }).then(res => {
+      console.log(res.data)
+      localStorage.setItem('token', res.data.token.token);
+      return res.data.cart
     })
   }
 
   this.addToCart = function(size, quantity, detail) {
+    console.log(localStorage.getItem('token'))
     return $http({
       url: baseUrl + '/api/cart',
       method: 'POST',
@@ -57,8 +62,8 @@ let baseUrl = devUrl;
       }
     })
     .then(res => {
-      localStorage.setItem('token', res.data.token);
-      return res
+      localStorage.setItem('token', res.data.token.token);
+      return res.data.cart
     })
   }
 
@@ -72,10 +77,37 @@ let baseUrl = devUrl;
       data: product
     })
     .then(res => {
-      localStorage.setItem('token', res.data.token);
-      return res
+      localStorage.setItem('token', res.data.token.token);
+      return res.data.cart
     })
 
+  }
+
+  this.updateCart = function(cart) {
+    return $http({
+      url: baseUrl + '/api/update',
+      method: 'POST', 
+      headers: {
+        'authorization': localStorage.getItem('token')
+      },
+      data: cart
+    })
+    .then(res => {
+      localStorage.setItem('token', res.data.token.token);
+      return res.data.cart
+    })
+
+  }
+
+  this.createToken = function(){
+    return $http({
+      method: 'POST',
+      url: baseUrl + '/api/createToken'
+    }).then(res => {
+      console.log(res.data.token)
+      localStorage.setItem('token', res.data.token.token);
+      return res.data.cart
+    })
   }
 
   // this.addToCart().then(res => {
