@@ -38,14 +38,12 @@ let baseUrl = devUrl;
         'authorization': localStorage.getItem('token')
       }
     }).then(res => {
-      console.log(res.data)
       localStorage.setItem('token', res.data.token.token);
       return res.data.cart
     })
   }
 
   this.addToCart = function(size, quantity, detail) {
-    console.log(localStorage.getItem('token'))
     return $http({
       url: baseUrl + '/api/cart',
       method: 'POST',
@@ -104,18 +102,11 @@ let baseUrl = devUrl;
       method: 'POST',
       url: baseUrl + '/api/createToken'
     }).then(res => {
-      console.log(res.data.token)
       localStorage.setItem('token', res.data.token.token);
       return res.data.cart
     })
   }
 
-  // this.addToCart().then(res => {
-  //   console.log(res)
-  //   getCart().then(res => {
-  //     console.log(res)
-  //   })
-  // })
 
 
 

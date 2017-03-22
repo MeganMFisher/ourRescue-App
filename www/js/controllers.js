@@ -49,21 +49,34 @@ angular.module('app.controllers', [])
   .controller('ProductInfoCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
     function ($scope, $stateParams, BlankService, $rootScope) {
 
-      
+      init();
+      function init(){
+       let token = localStorage.getItem('token'); 
+        if(token && token != 'undefined'){
+          console.log('we have token')
+          getCart();
+
+        } else {
+          console.log('no token')
+          createToken().then(function(cartFromServer){
+            $rootScope.cart = cartFromServer;
+          })
+        }
+      }
+      function createToken(){
+        return BlankService.createToken();
+      }
+
+      function getCart() {
+        BlankService.getCart().then(function (cartFromServer) {
+          $rootScope.cart = cartFromServer;
+        })
+      }
 
       BlankService.getOneProduct($stateParams.id).then(function (resp) {
         $scope.detail = resp.data[0];
       })
 
-      function getCart() {
-        BlankService.getCart().then(function (cartFromServer) {
-          $rootScope.cart = cartFromServer;
-          console.log($rootScope.cart)
-          
-
-        })
-
-      }
 
       function isDuplicate() {
         if ($rootScope.cart.length < 1) return false;
@@ -78,19 +91,15 @@ angular.module('app.controllers', [])
       $scope.productData = {};
 
       $scope.addToCart = function () {
-
-        if (!Array.isArray($rootScope.cart)) { //it cart is empty
+        if ($rootScope.cart.length < 1) { 
           console.log('cart was empty')
-          // $rootScope.cart = [];
           BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function (cartFromServer) {
               $rootScope.cart = cartFromServer;
           })
         } else if (isDuplicate()) {
           console.log('changing quantity')
-
           for (let item of $rootScope.cart) {
             if (item.id === $scope.detail.id) {
-
               item.quantity += 1;
               BlankService.updateCart($rootScope.cart).then(function(cartFromServer){
                 $rootScope.cart = cartFromServer;
@@ -119,7 +128,7 @@ angular.module('app.controllers', [])
        let token = localStorage.getItem('token'); 
         if(token && token != 'undefined'){
           console.log('we have token')
-          getCart();
+          getCart()
 
         } else {
           console.log('no token')
@@ -134,11 +143,8 @@ angular.module('app.controllers', [])
       }
 
       function getCart() {
-        BlankService.getCart().then(function (cartFromServer) {
+        return BlankService.getCart().then(function (cartFromServer) {
           $rootScope.cart = cartFromServer;
-          console.log($rootScope.cart)
-          
-
         })
 
       }
@@ -152,6 +158,8 @@ angular.module('app.controllers', [])
           total += (item.price * item.quantity);
         }
         return total;
+        } else {
+          return '0'
         }
       }
 
