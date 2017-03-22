@@ -7,7 +7,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('menu.home', {
+    .state('menu.home', {
     url: '/',
     views: {
       'side-menu21': {
