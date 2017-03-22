@@ -404,6 +404,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 // *******************************************
+// *           Checkout View                 *
+// *******************************************
+
+
+
+// *******************************************
 // *             Donate View                 *
 // *******************************************
 
@@ -466,7 +472,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .donationBoxOneBackground {
   margin-left: -10px;
   width: calc(100% + 20px);
-  height: 600px;
+  height: 700px;
   background-color: white;
   border-top: 20px solid white;
 }
@@ -475,8 +481,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 550px;
-  padding-top: 15%;
+  height: 650px;
+  padding-top: 8%;
 }
 
 .donationBoxOne {
@@ -485,7 +491,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   padding-bottom: 10%;
   background: url('../img/donatePic.png') no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 700px;
   width: 90%;
   margin: auto;
 }
@@ -508,13 +514,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 #donate-button2 {
   width: 75px;
   height: 45px;
-  // background-color: #c1c1c0;
   background-color: #58595b;
   color: white;
   font-size: 15px;
 }
 
+#donateInput{
+  width: 280px;
+  margin-top: 3px;
+  margin-left: 20px;
+}
+
 #donate-button1 {
+  margin-top: 20px;
   background-color: #58595b;
   color: white;
 }
@@ -662,6 +674,3 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   border: 5px solid #696968;
 }
 
-// *******************************************
-// *           Checkout View                 *
-// *******************************************

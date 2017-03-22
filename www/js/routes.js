@@ -98,8 +98,9 @@ angular.module('app.routes', [])
     templateUrl: 'templates/checkout.html',
     controller: 'checkoutCtrl'
    
-    
   })
+
+
 
 $urlRouterProvider.otherwise('/side-menu21/')
 

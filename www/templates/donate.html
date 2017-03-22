@@ -17,7 +17,7 @@
         <div class='donationBoxOne'>
           <div class='donationWordBoxOne'>
             <h1>Make a Donation</h1>
-            <!--<button class='ion-checkmark-round'> YES, DONATE MONTHLY</button>-->
+
             <h4>Choose an Amount</h4>
             <div class='donateButtonBox'>
               <button id="donate-button2" class="button button-dark  button-block button-outline">$10</button>
@@ -27,12 +27,33 @@
               <button id="donate-button2" class="button button-dark  button-block button-outline">$250</button>
             </div>
             <h4>OR, Customize The Amount Below</h4>
-            <label class="item item-input">
-                <span class="input-label">$</span>
-                  <input type="text">
-                </label>
-            <h5>To Become An Abolitionist and set up a Recurring Donation click <a href='https://ourrescue.donorshops.com/product/DONATE-RECURRING/willyoucometoourrescue.php' class='chainLink'>here!</a></h5>
-            <button id="donate-button1" class="button button-dark  button-block button-outline">Donate Now!</button>
+            <div>
+              <form ng-submit='charge(payment)' class='col-xs-4'>
+                <label class="item item-input" id='donateInput'>
+        <input class='form-control' placeholder="Amount" type="text" name="" ng-model='mockPrice' required>
+        </label>
+                <label class="item item-input" id='donateInput'>
+            <input type="text" name="name" class='form-control' placeholder='Name on Card' required>
+        </label>
+                <label class="item item-input" id='donateInput'>
+            <input type="text" ng-model="payment.card.number" class='form-control' placeholder='Card Number' required>
+        </label>
+                <label class="item item-input" id='donateInput'>
+            <input type="text" ng-model="payment.card.cvc" class='form-control' placeholder='CVC' required>
+        </label>
+                <label class="item item-input" id='donateInput'>
+            <input type="text" name="name" ng-model="payment.card.exp_month" class='form-control' placeholder='Exp. Month' required>
+        </label>
+                <label class="item item-input" id='donateInput'>
+            <input type="text" name="name" ng-model="payment.card.exp_year" class='form-control' placeholder='Exp. Year' required>
+        </label>
+                <button id="donate-button1" class="button button-dark  button-block button-outline" type='sumbit'>Donate Now!</button>
+              </form>
+            </div>
+            <h5>To Become An Abolitionist and set up a Recurring Donation click
+              <a href='https://ourrescue.donorshops.com/product/DONATE-RECURRING/willyoucometoourrescue.php'
+                class='chainLink'>here!</a>
+            </h5>
           </div>
         </div>
       </div>

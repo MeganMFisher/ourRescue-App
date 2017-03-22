@@ -10135,7 +10135,7 @@ a.button {
 .donationBoxOneBackground {
   margin-left: -10px;
   width: calc(100% + 20px);
-  height: 600px;
+  height: 700px;
   background-color: white;
   border-top: 20px solid white; }
 
@@ -10143,8 +10143,8 @@ a.button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 550px;
-  padding-top: 15%; }
+  height: 650px;
+  padding-top: 8%; }
 
 .donationBoxOne {
   padding-left: 2%;
@@ -10152,7 +10152,7 @@ a.button {
   padding-bottom: 10%;
   background: url("../img/donatePic.png") no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 700px;
   width: 90%;
   margin: auto; }
 
@@ -10174,7 +10174,13 @@ a.button {
   color: white;
   font-size: 15px; }
 
+#donateInput {
+  width: 280px;
+  margin-top: 3px;
+  margin-left: 20px; }
+
 #donate-button1 {
+  margin-top: 20px;
   background-color: #58595b;
   color: white; }
 

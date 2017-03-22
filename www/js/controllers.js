@@ -264,8 +264,8 @@ angular.module('app.controllers', [])
         $scope.addressData.address,
         $scope.addressData.city,
         $scope.addressData.state,
-        $scope.addressData.zipcode).then(function(response){
-            console.log(response)
+        $scope.addressData.zipcode).then(function(){
+          
         })
       }
 
