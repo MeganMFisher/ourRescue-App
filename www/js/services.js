@@ -110,17 +110,17 @@ let baseUrl = devUrl;
   }
 
 
-  this.addToAddressDatabase = function() {
+  this.addToAddressDatabase = function(firstName, lastName, emailAddress, address, city, state, zipcode) {
     return $http({
       url: baseUrl + '/api/address',
       method: 'POST',
       data: {
-        size: size,
-        quantity: quantity,
-        name: detail.name,
-        price: detail.price,
-        imageurl: detail.imageurl, 
-        id: detail.id
+        firstName: firstName,
+        lastName: lastName,
+        emailAddress: emailAddress,
+        address: address,
+        city: city, 
+        zipcode: zipcode
       }
     
   })
