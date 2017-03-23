@@ -273,47 +273,48 @@ angular.module('app.controllers', [])
   // *                 Stripe                  *
   // *******************************************
 
-  // $scope.payment = {};
-  // $scope.price = {};
+  $scope.payment = {};
+  $scope.price = {};
 
-  // $scope.charge = function (payment) {
+  $scope.charge = function (payment) {
 
-  //   console.log(payment);
-  //   console.log($scope.payment);
-  //   console.log($scope.price)
-  //   console.log(typeof $scope.price)
+    return stripe.card.createToken($scope.payment.card)
+    .then(function (response) {
+      console.log('token created for card ending in ', response.card.last4);
+      console.log($scope.payment)
 
-  //   return stripe.card.createToken($scope.payment.card)
-  //   .then(function (response) {
-  //     console.log('token created for card ending in ', response.card.last4);
-  //     var payment = angular.copy($scope.payment);
-  //     payment.card = void 0;
-  //     payment.token = response.id;
+      var payment = angular.copy($scope.payment); 
+      console.log(payment)
+      // console.log($scope.payment)
+      // payment.card = void 0;
+      console.log(payment.card)
+      payment.token = response.id;
 
-  //     return $http({
-  //       method: 'POST',
-  //       url: 'http://localhost:7950/api/payment',
-  //       data: {
-  //         amount: $scope.price,
-  //         payment: payment
-  //       }
-  //     })
-  //   })
-  //   .then(function(payment) {
-  //     console.log('successfully submitted payment for $', payment);
-  //     $state.go('congrats');
-  //   })
-  //   .catch(function (err) {
-  //      if (err.type && /^Stripe/.test(err.type)) {
-  //        console.log('Stripe error: ', err.message);
-  //        alert(err.message)
-  //      }
-  //      else {
-  //        console.log('Other error occurred, possibly with your API', err);
-  //        alert(err.message)
-  //      }
-  //    });
-  // };
+      return $http({
+        method: 'POST',
+        url: 'http://localhost:8100/api/payment',
+        data: {
+          amount: $scope.price,
+          payment: payment
+        }
+      })
+    })
+    .then(function(payment) {
+      console.log('successfully submitted payment for $', payment);
+      $state.go('congrats');
+    })
+    .catch(function (err) {
+       if (err.type && /^Stripe/.test(err.type)) {
+         console.log('Stripe error: ', err.message);
+         alert(err.message)
+       }
+       else {
+         console.log('Other error occurred, possibly with your API', err);
+         alert(err.message)
+       }
+     });
+  };
+
 
     }
   ])
