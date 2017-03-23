@@ -230,8 +230,8 @@ angular.module('app.controllers', [])
   // *******************************************
 
 
-  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService', '$stateParams', '$rootScope', 'stripe', '$http',
-    function ($scope, $stateParams, BlankService, $stateParams, $rootScope, stripe, $http) {
+  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService', '$stateParams', '$rootScope', 'stripe', '$http', '$state',
+    function ($scope, $stateParams, BlankService, $stateParams, $rootScope, stripe, $http, $state) {
       
       $rootScope.cart = [];
 
