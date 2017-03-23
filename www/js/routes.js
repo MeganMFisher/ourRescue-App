@@ -23,7 +23,7 @@ angular.module('app.routes', ['angular-stripe',])
     views: {
       'side-menu21': {
         templateUrl: 'templates/donate.html',
-        controller: 'donateCtrl'
+        controller: 'checkoutCtrl'
       }
     }
   })

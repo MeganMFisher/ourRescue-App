@@ -30,7 +30,7 @@
             <div>
               <form ng-submit='charge(payment)' class='col-xs-4'>
                 <label class="item item-input" id='donateInput'>
-        <input class='form-control' placeholder="Amount" type="text" name="" ng-model='mockPrice' required>
+        <input class='form-control' placeholder="Amount" type="text" name="" ng-model='price.price' required>
         </label>
                 <label class="item item-input" id='donateInput'>
             <input type="text" name="name" class='form-control' placeholder='Name on Card' required>
@@ -47,7 +47,7 @@
                 <label class="item item-input" id='donateInput'>
             <input type="text" name="name" ng-model="payment.card.exp_year" class='form-control' placeholder='Exp. Year' required>
         </label>
-                <button id="donate-button1" class="button button-dark  button-block button-outline" type='sumbit'>Donate Now!</button>
+                <button id="donate-button1" class="button button-dark  button-block button-outline" type='sumbit' ng-click="addToAddressDatabase()">Donate Now!</button>
               </form>
             </div>
             <h5>To Become An Abolitionist and set up a Recurring Donation click
