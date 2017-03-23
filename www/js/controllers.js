@@ -154,7 +154,7 @@ angular.module('app.controllers', [])
       function isDuplicate() {
         if ($rootScope.cart.length < 1) return false;
         for (let item of $rootScope.cart) {
-          if (item.id === $scope.detail.id) {
+          if (item.id === $scope.detail.id && item.size === $scope.productData.size) {
             return true;
           }
         }
@@ -168,6 +168,7 @@ angular.module('app.controllers', [])
           console.log('cart was empty')
           BlankService.addToCart($scope.productData.size, $scope.productData.quantity, $scope.detail).then(function (cartFromServer) {
               $rootScope.cart = cartFromServer;
+    
           })
         } else if (isDuplicate()) {
           console.log('changing quantity')
