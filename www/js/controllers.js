@@ -292,6 +292,7 @@ angular.module('app.controllers', [])
                     for (var i = 0; i < $rootScope.cart.length; i++) {
                       var item = $rootScope.cart[i];
                       total += (item.price * item.quantity);
+                      
                     }
                     $scope.totalPrice = {};
                     $scope.totalPrice.price = total;
@@ -334,18 +335,21 @@ angular.module('app.controllers', [])
       console.log('token created for card ending in ', response.card.last4);
       console.log($scope.payment)
 
-      var payment = angular.copy($scope.payment); 
+      var payment = angular.copy($scope.payment);
+    
       console.log(payment)
       // console.log($scope.payment)
       // payment.card = void 0;
       console.log(payment.card)
       payment.token = response.id;
 
+      var adjustedTotal = $scope.totalPrice.price * 100;
+
       return $http({
         method: 'POST',
         url: 'http://localhost:8100/api/payment',
         data: {
-          amount: $scope.total,
+          amount: adjustedTotal,
           payment: payment
         }
       })
