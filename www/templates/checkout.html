@@ -41,77 +41,34 @@
 <form ng-submit='charge(payment)' class='col-xs-4'>
     <h4>PAY WITH CARD</h4>
     <section class='form-group'>
-        <label class="item item-input">Total Price: ${{total()}}.00
-        <input class='form-control' type="text" name="" ng-model='price.price' required>
+        <label class="item item-input"><strong>Total Price: <br></strong>
+        <input class='form-control' type="text" name="" placeholder=' ${{total()}}.00' ng-model='price.price' required>
         </label>
-      <!--<label>Price to charge:</label>
-      <input
-      class='form-control'
-      type="text"
-      name=""
-      ng-model='mockPrice'
-      placeholder="type in '5.95'"
-      required>-->
     </section>
     <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" class='form-control' placeholder='Name on Card' required>
         </label>
-        <!--<label>Name on card:</label>
-        <input
-        type="text"
-        name="name"
-        class='form-control'
-        placeholder='any random name'
-        required>-->
     </section>
     <section class='form-group'>
         <label class="item item-input">
             <input type="text" ng-model="payment.card.number" class='form-control' placeholder='Card Number' required>
         </label>
-        <!--<label>Card number:</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.number"
-        type="text"
-        placeholder="use one of Stripe's test card numbers"
-        required>-->
     </section>
     <section class='form-group'>
         <label class="item item-input">
             <input type="text" ng-model="payment.card.cvc" class='form-control' placeholder='CVC' required>
         </label>
-        <!--<label>CVC:</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.cvc"
-        placeholder='random CVC number'
-        type="text"
-        required>-->
     </section>
     <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" ng-model="payment.card.exp_month" class='form-control' placeholder='Exp. Month' required>
         </label>
-        <!--<label>Exp. Mo</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.exp_month"
-        type="text"
-        name="name"
-        placeholder="MM">-->
     </section>
     <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" ng-model="payment.card.exp_year" class='form-control' placeholder='Exp. Year' required>
         </label>
-        <!--<label>Exp. Yr</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.exp_year"
-        type="text"
-        name="name"
-        placeholder="YY">-->
     </section>
     <button ion-button class="button button-calm button-block" type='sumbit' ng-click="addToAddressDatabase()">CONFIRM</button>
 </form>
