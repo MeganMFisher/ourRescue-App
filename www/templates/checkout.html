@@ -40,36 +40,24 @@
 
 <form ng-submit='charge(payment)' class='col-xs-4'>
     <h4>PAY WITH CARD</h4>
-    <section class='form-group'>
         <label class="item item-input"><strong>Total Price: <br></strong>
-        <input class='form-control' type="text" name="" placeholder=' ${{total()}}.00' ng-model='price.price' required>
+        <div class='form-control' type="text" name="" ng-model='price.price'>{{totalPrice.price | currency}}</div>
         </label>
-    </section>
-    <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" class='form-control' placeholder='Name on Card' required>
         </label>
-    </section>
-    <section class='form-group'>
         <label class="item item-input">
             <input type="text" ng-model="payment.card.number" class='form-control' placeholder='Card Number' required>
         </label>
-    </section>
-    <section class='form-group'>
         <label class="item item-input">
             <input type="text" ng-model="payment.card.cvc" class='form-control' placeholder='CVC' required>
         </label>
-    </section>
-    <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" ng-model="payment.card.exp_month" class='form-control' placeholder='Exp. Month' required>
         </label>
-    </section>
-    <section class='form-group'>
         <label class="item item-input">
             <input type="text" name="name" ng-model="payment.card.exp_year" class='form-control' placeholder='Exp. Year' required>
         </label>
-    </section>
     <button ion-button class="button button-calm button-block" type='sumbit' ng-click="addToAddressDatabase()">CONFIRM</button>
 </form>
 

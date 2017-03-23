@@ -152,8 +152,8 @@ angular.module('app.controllers', [])
   // *           shoppingCartCtrl              *
   // *******************************************
 
-  .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope',
-    function ($scope, $stateParams, BlankService, $rootScope) {
+  .controller('shoppingCartCtrl', ['$scope', '$stateParams', 'BlankService','$state', '$rootScope',
+    function ($scope, $stateParams, BlankService, $state, $rootScope) {
       // $rootScope.total;
       $rootScope.cart = [];
 
@@ -207,6 +207,9 @@ angular.module('app.controllers', [])
       }
 
 
+      $scope.changeState = function() {
+        $state.go('checkout', {}, {reload: 'checkout'})
+      }
 
     }
   ])
@@ -238,23 +241,29 @@ angular.module('app.controllers', [])
       function getCart() {
         return BlankService.getCart().then(function (cartFromServer) {
           $rootScope.cart = cartFromServer;
+          console.log('cart running')
+              $scope.total = function () {
+                console.log($rootScope)
+                console.log($rootScope.cart[0])
+                    if($rootScope.cart.length > 0){
+                    var total = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                      var item = $rootScope.cart[i];
+                      total += (item.price * item.quantity);
+                    }
+                    $scope.totalPrice = {};
+                    $scope.totalPrice.price = total;
+                    console.log($scope.totalPrice)
+                    } else {
+                      $scope.totalPrice = 'zero';
+                    }
+                  }
+                console.log($scope.total());
         })
 
       }
+      getCart();
 
-
-      $scope.total = function () {
-            if($rootScope.cart.length > 0){
-            var total = 0;
-            for (var i = 0; i < $rootScope.cart.length; i++) {
-              var item = $rootScope.cart[i];
-              total += (item.price * item.quantity);
-            }
-            return total;
-            } else {
-              return '0'
-            }
-          }
 
 
       $scope.addressData = {};
@@ -294,7 +303,7 @@ angular.module('app.controllers', [])
         method: 'POST',
         url: 'http://localhost:8100/api/payment',
         data: {
-          amount: $scope.price,
+          amount: $scope.totalPrice,
           payment: payment
         }
       })
