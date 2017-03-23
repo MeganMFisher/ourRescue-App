@@ -19,6 +19,12 @@ angular.module('app.controllers', [])
   .controller('donateCtrl', ['$scope', '$stateParams', 'stripe', '$http', '$state',
     function ($scope, $stateParams, stripe, $http, $state) {
 
+      $('#donateYellowBox').waypoint(function () {
+            $('#donateYellowBox').addClass('fadeInLeft');
+        }, {
+            // offset: '60%'
+        });
+
   // -------------------------------------------
   // -                 Stripe                  -
   // -------------------------------------------
@@ -279,8 +285,8 @@ angular.module('app.controllers', [])
   // *******************************************
 
 
-  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService', '$stateParams', '$rootScope', 'stripe', '$http', '$state',
-    function ($scope, $stateParams, BlankService, $stateParams, $rootScope, stripe, $http, $state) {
+  .controller('checkoutCtrl', ['$scope', '$stateParams', 'BlankService', '$rootScope', 'stripe', '$http', '$state',
+    function ($scope, $stateParams, BlankService, $rootScope, stripe, $http, $state) {
       
       $rootScope.cart = [];
 
