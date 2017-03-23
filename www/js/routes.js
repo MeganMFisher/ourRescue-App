@@ -1,7 +1,8 @@
-angular.module('app.routes', [])
+angular.module('app.routes', ['angular-stripe',])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, stripeProvider) {
 
+  stripeProvider.setPublishableKey('pk_test_2ruzm2otavOn9xEgEHxerwa4');
 
   $stateProvider
     
@@ -98,6 +99,11 @@ angular.module('app.routes', [])
     templateUrl: 'templates/checkout.html',
     controller: 'checkoutCtrl'
    
+  })
+
+  .state('congrats', {
+    url: '/congrats',
+    templateUrl: './templates/congrats.html'
   })
 
 
