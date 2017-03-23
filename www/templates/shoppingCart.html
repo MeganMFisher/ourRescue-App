@@ -17,7 +17,7 @@
     </div>
   </ion-content>
   <ion-footer-bar align-title="left" class="bar-dark" id="totalCheckout">
-  <h1 class="title">Total: ${{total()}}.00</h1>
+  <h1 class="title">Total: {{total() | currency}}</h1>
   <div class="buttons" ng-click="doSomething()">
     <button ion-button id="shoppingCart-button7" class="button button-calm" ng-click='changeState()'>Checkout</button>
   </div>

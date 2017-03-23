@@ -16,8 +16,53 @@ angular.module('app.controllers', [])
   // *               donateCtrl                *
   // *******************************************
 
-  .controller('donateCtrl', ['$scope', '$stateParams',
-    function ($scope, $stateParams) {
+  .controller('donateCtrl', ['$scope', '$stateParams', 'stripe', '$http', '$state',
+    function ($scope, $stateParams, stripe, $http, $state) {
+
+  // -------------------------------------------
+  // -                 Stripe                  -
+  // -------------------------------------------
+  $scope.payment = {};
+  $scope.price = {};
+
+  $scope.charge = function (payment) {
+
+    return stripe.card.createToken($scope.payment.card)
+    .then(function (response) {
+      console.log('token created for card ending in ', response.card.last4);
+      console.log($scope.payment)
+
+      var payment = angular.copy($scope.payment); 
+      console.log(payment)
+      // console.log($scope.payment)
+      // payment.card = void 0;
+      console.log(payment.card)
+      payment.token = response.id;
+
+      return $http({
+        method: 'POST',
+        url: 'http://localhost:8100/api/payment',
+        data: {
+          amount: $scope.price,
+          payment: payment
+        }
+      })
+    })
+    .then(function(payment) {
+      console.log('successfully submitted payment for $', payment);
+      $state.go('congrats');
+    })
+    .catch(function (err) {
+       if (err.type && /^Stripe/.test(err.type)) {
+         console.log('Stripe error: ', err.message);
+         alert(err.message)
+       }
+       else {
+         console.log('Other error occurred, possibly with your API', err);
+         alert(err.message)
+       }
+     });
+  };
 
 
     }
@@ -241,10 +286,7 @@ angular.module('app.controllers', [])
       function getCart() {
         return BlankService.getCart().then(function (cartFromServer) {
           $rootScope.cart = cartFromServer;
-          console.log('cart running')
               $scope.total = function () {
-                console.log($rootScope)
-                console.log($rootScope.cart[0])
                     if($rootScope.cart.length > 0){
                     var total = 0;
                     for (var i = 0; i < $rootScope.cart.length; i++) {
@@ -255,10 +297,10 @@ angular.module('app.controllers', [])
                     $scope.totalPrice.price = total;
                     console.log($scope.totalPrice)
                     } else {
-                      $scope.totalPrice = 'zero';
+                      $scope.totalPrice = 0;
                     }
                   }
-                console.log($scope.total());
+                  $scope.total()
         })
 
       }
@@ -303,7 +345,7 @@ angular.module('app.controllers', [])
         method: 'POST',
         url: 'http://localhost:8100/api/payment',
         data: {
-          amount: $scope.totalPrice,
+          amount: $scope.total,
           payment: payment
         }
       })
