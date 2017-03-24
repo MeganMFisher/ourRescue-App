@@ -56,7 +56,7 @@ angular.module('app.controllers', [])
     })
     .then(function(payment) {
       console.log('successfully submitted payment for $', payment);
-      $state.go('donateCongrats');
+      $state.go('donateThanks');
     })
     .catch(function (err) {
        if (err.type && /^Stripe/.test(err.type)) {

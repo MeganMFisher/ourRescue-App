@@ -408,11 +408,63 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // *           Checkout View                 *
 // *******************************************
 
+#page10 {
+  background-color: #e1e1e1;
+}
+
+.checkoutHeaders {
+  color: $calm;
+  font-weight: bold;
+}
+
+#checkoutAddressForm {
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  // opacity: .5;
+}
+
+.checkoutForm {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  // opacity: .5;
+}
 
 // *******************************************
 // *             Congrats View               *
 // *******************************************
 
+.congratsbackground {
+  background: url('../img/donatePic.png') no-repeat;
+  background-size: cover;
+  // background: $calm;
+  height: 600px; 
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.congratsOverlay {
+  width: 80%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgba(0,0,0,0.4);
+}
+
+.congratsOverlay h1 {
+  color: $energized;
+  font-size: 66px;
+}
+
+.congratsOverlay h2 {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: $light;
+  
+}
 
 // *******************************************
 // *             Donate View                 *
@@ -565,29 +617,34 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 // *******************************************
-// *         Donate Congrats View            *
+// *           Donate Thanks View            *
 // *******************************************
 
-.donateCongratsImage {
-  background: url('../img/flower.jpg');
+.donateThanksImage {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0,0, 0, 0.6)), url('../img/blackDesign.jpg') center;
   background-size: cover;
   height: 600px; 
   margin-left: -10px;
   width: calc(100% + 20px);
 }
 
-.donateCongratsImage h1{
+.donateThanksOverlay {
+  height: 100%;
+  width: 100%;
+}
+
+.donateThanksImage h1{
   padding-top: 60px;
   line-height: 90px;
-  color: $dark;
+  color: $energized;
   font-size: 66px;
   text-align: center;
-  font-family: cursive;
+  // font-family: cursive;
   font-weight: bold;
 }  
 
-.donateCongratsImage span{
-  color: $dark;
+.donateThanksImage span{
+  color: $energized;
   font-size: 56px;
   text-align: center;
 } 

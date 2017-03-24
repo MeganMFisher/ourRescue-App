@@ -106,9 +106,9 @@ angular.module('app.routes', ['angular-stripe',])
     templateUrl: './templates/congrats.html'
   })
 
-  .state('donateCongrats', {
-    url: '/donateCongrats',
-    templateUrl: './templates/donateCongrats.html'
+  .state('donateThanks', {
+    url: '/donateThanks',
+    templateUrl: './templates/donateThanks.html'
   })
 
 

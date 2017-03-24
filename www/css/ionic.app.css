@@ -10087,6 +10087,48 @@ a.button {
   right: 5px;
   color: #fac03c; }
 
+#page10 {
+  background-color: #e1e1e1; }
+
+.checkoutHeaders {
+  color: #48839a;
+  font-weight: bold; }
+
+#checkoutAddressForm {
+  border: 3px solid rgba(0, 0, 0, 0.3); }
+
+.checkoutForm {
+  border: 5px solid rgba(0, 0, 0, 0.3); }
+
+.congratsbackground {
+  background: url("../img/donatePic.png") no-repeat;
+  background-size: cover;
+  height: 600px;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.congratsOverlay {
+  width: 80%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgba(0, 0, 0, 0.4); }
+
+.congratsOverlay h1 {
+  color: #fac03c;
+  font-size: 66px; }
+
+.congratsOverlay h2 {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff; }
+
 #page2 {
   background: url("../img/littlegirl.png") no-repeat; }
 
@@ -10208,24 +10250,27 @@ a.button {
   text-align: justify;
   color: white; }
 
-.donateCongratsImage {
-  background: url("../img/flower.jpg");
+.donateThanksImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blackDesign.jpg") center;
   background-size: cover;
   height: 600px;
   margin-left: -10px;
   width: calc(100% + 20px); }
 
-.donateCongratsImage h1 {
+.donateThanksOverlay {
+  height: 100%;
+  width: 100%; }
+
+.donateThanksImage h1 {
   padding-top: 60px;
   line-height: 90px;
-  color: #313131;
+  color: #fac03c;
   font-size: 66px;
   text-align: center;
-  font-family: cursive;
   font-weight: bold; }
 
-.donateCongratsImage span {
-  color: #313131;
+.donateThanksImage span {
+  color: #fac03c;
   font-size: 56px;
   text-align: center; }
 
