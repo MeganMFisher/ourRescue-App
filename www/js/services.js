@@ -8,7 +8,7 @@ angular.module('app.services', [])
 let devUrl = 'http://localhost:8100'
 let herokuUrl = 'https://ourrescueapp.herokuapp.com'
 
-let baseUrl = devUrl;
+let baseUrl = herokuUrl;
 
 
     this.getAllProducts = function() {
