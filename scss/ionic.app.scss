@@ -565,6 +565,34 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 // *******************************************
+// *         Donate Congrats View            *
+// *******************************************
+
+.donateCongratsImage {
+  background: url('../img/flower.jpg');
+  background-size: cover;
+  height: 600px; 
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}
+
+.donateCongratsImage h1{
+  padding-top: 60px;
+  line-height: 90px;
+  color: $dark;
+  font-size: 66px;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+}  
+
+.donateCongratsImage span{
+  color: $dark;
+  font-size: 56px;
+  text-align: center;
+} 
+
+// *******************************************
 // *        Social Media View                *
 // *******************************************
 

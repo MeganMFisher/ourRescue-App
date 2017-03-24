@@ -106,6 +106,10 @@ angular.module('app.routes', ['angular-stripe',])
     templateUrl: './templates/congrats.html'
   })
 
+  .state('donateCongrats', {
+    url: '/donateCongrats',
+    templateUrl: './templates/donateCongrats.html'
+  })
 
 
 $urlRouterProvider.otherwise('/side-menu21/')

@@ -19,11 +19,11 @@ angular.module('app.controllers', [])
   .controller('donateCtrl', ['$scope', '$stateParams', 'stripe', '$http', '$state',
     function ($scope, $stateParams, stripe, $http, $state) {
 
-      $('#donateYellowBox').waypoint(function () {
-            $('#donateYellowBox').addClass('fadeInLeft');
-        }, {
-            // offset: '60%'
-        });
+      // $('#donateYellowBox').waypoint(function () {
+      //       $('#donateYellowBox').addClass('fadeInLeft');
+      //   }, {
+      //       offset: '60%'
+      //   });
 
   // -------------------------------------------
   // -                 Stripe                  -
@@ -56,7 +56,7 @@ angular.module('app.controllers', [])
     })
     .then(function(payment) {
       console.log('successfully submitted payment for $', payment);
-      $state.go('congrats');
+      $state.go('donateCongrats');
     })
     .catch(function (err) {
        if (err.type && /^Stripe/.test(err.type)) {
