@@ -19,11 +19,17 @@ angular.module('app.controllers', [])
   .controller('donateCtrl', ['$scope', '$stateParams', 'stripe', '$http', '$state',
     function ($scope, $stateParams, stripe, $http, $state) {
 
-      // $('#donateYellowBox').waypoint(function () {
-      //       $('#donateYellowBox').addClass('fadeInLeft');
-      //   }, {
-      //       offset: '60%'
-      //   });
+    //   $(document).ready(function(){
+    // $('#worldImageFadeIn').css('opacity', 0);
+  
+
+    // $('#blackButtonFadeIn').waypoint(function() {
+    //         $('#blackButtonFadeIn').addClass('animated fadeInRightBig');
+    //     }, {
+    //         offset: '100%'
+    //     });
+
+    // })
 
   // -------------------------------------------
   // -                 Stripe                  -
