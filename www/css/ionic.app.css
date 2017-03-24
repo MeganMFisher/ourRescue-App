@@ -10103,7 +10103,7 @@ a.button {
 .congratsbackground {
   background: url("../img/donatePic.png") no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 630px;
   margin-left: -10px;
   width: calc(100% + 20px);
   display: flex;
@@ -10253,7 +10253,7 @@ a.button {
 .donateThanksImage {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blackDesign.jpg") center;
   background-size: cover;
-  height: 600px;
+  height: 630px;
   margin-left: -10px;
   width: calc(100% + 20px); }
 

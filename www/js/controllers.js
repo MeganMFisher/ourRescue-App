@@ -47,9 +47,9 @@ angular.module('app.controllers', [])
 
       return $http({
         method: 'POST',
-        url: 'https://ourrescueapp.herokuapp.com/api/payment',
+        url: 'http://localhost:8100/api/payment',
         data: {
-          amount: $scope.price,
+          amount: $scope.price.price,
           payment: payment
         }
       })
@@ -354,7 +354,7 @@ angular.module('app.controllers', [])
 
       return $http({
         method: 'POST',
-        url: 'https://ourrescueapp.herokuapp.com/api/payment',
+        url: 'http://localhost:8100/api/payment',
         data: {
           amount: adjustedTotal,
           payment: payment
