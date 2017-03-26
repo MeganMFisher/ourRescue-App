@@ -9840,6 +9840,10 @@ a.button {
   border: 5px solid #313131;
   letter-spacing: 8px; }
 
+#slide1-image {
+  animation-duration: 1.5s;
+  animation-delay: .5s; }
+
 #page3 {
   background: linear-gradient(#48839a, #85b5bf); }
 
@@ -10162,7 +10166,9 @@ a.button {
 .donateYellowWordBox {
   background: linear-gradient(rgba(250, 192, 60, 0.5), rgba(250, 192, 60, 0.5));
   height: 120px;
-  width: calc(100% + 155px); }
+  width: calc(100% + 155px);
+  animation-delay: 1;
+  animation-duration: 1; }
 
 .donateYellowWordBox h3 {
   color: #58595b;

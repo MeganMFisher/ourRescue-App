@@ -69,6 +69,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // *            Volunteer View               *
 // *******************************************
 
+#slide1-image {
+  animation-duration: 1.5s;
+  animation-delay: .5s;
+}
+
 #page3 {
   background: linear-gradient(rgb(72, 131, 154), rgb(133, 181, 191));
 }
@@ -470,6 +475,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // *             Donate View                 *
 // *******************************************
 
+
 #page2 {
   background: url('../img/littlegirl.png') no-repeat;
 }
@@ -512,6 +518,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   height: 120px;
   // margin-left: -45px;
   width: calc(100% + 155px);
+  animation-delay: 1;
+  animation-duration: 1;
 }
 
 .donateYellowWordBox h3 {
