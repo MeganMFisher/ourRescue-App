@@ -1,13 +1,13 @@
 # OUR Rescue Ionic App
 
-![homeSideMenuPage](homeSideMenuPage.png)
+![homeSideMenuPage](/README-photos/homeSideMenuPage.png)
 
-![volunteerPage](volunteerPage.png)
+![volunteerPage](/README-photos/volunteerPage.png)
 
-![storePage](storePage.png)
+![storePage](/README-photos/storePage.png)
 
-![donatePage](donatePage.png)
+![donatePage](/README-photos/donatePage.png)
 
-![socialPage](socialPage.png)
+![socialPage](/README-photos/socialPage.png)
 
-![abolitionistPage](abolitionistPage.png)
+![abolitionistPage](/README-photos/abolitionistPage.png)
