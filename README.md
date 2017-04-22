@@ -6,7 +6,9 @@
 
 ![storePage](/README-photos/storePage.png)
 
-![donatePage](/README-photos/donatationPage.png)
+![storePage](/README-photos/productDetailsPage.png)
+
+![donatePage](/README-photos/donationPage.png)
 
 ![socialPage](/README-photos/socialPage.png)
 
